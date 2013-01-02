@@ -730,6 +730,11 @@ body.anon #searchBar .searchInputCancelable {
 .box img.gravatar {
   margin: 1px;
 }
+.box img.moneydj {
+  margin: 1px;
+  position: absolute;
+  z-index: 30;
+}
 .box a.followed,
 .box a.follow {
   line-height: 34px;
