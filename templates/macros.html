@@ -635,7 +635,7 @@ answer {% if answer.accepted() %}accepted-answer{% endif %} {% if answer.author_
     href="{{ user.get_absolute_url() }}"
 ><img class="moneydj" 
     width="{{size}}" height="{{size}}"
-    src="/m/default/media/images/SysJust.png"
+    src='{{"../media/images/SysJust.png"|media}}'
 /><img class="gravatar" 
     width="{{size}}" height="{{size}}"
     src="{{ user.get_avatar_url(size) }}"
