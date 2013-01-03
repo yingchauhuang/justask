@@ -1902,7 +1902,7 @@ msgstr "積分門檻"
 
 #: conf/minimum_reputation.py:22
 msgid "Upvote"
-msgstr "水唷(+1)"
+msgstr "讚(+1)"
 
 #: conf/minimum_reputation.py:31
 msgid "Downvote"
@@ -2931,7 +2931,7 @@ msgstr "標記最佳答案"
 
 #: const/__init__.py:130
 msgid "upvoted"
-msgstr "『水唷』"
+msgstr "『讚』"
 
 #: const/__init__.py:131
 msgid "downvoted"
@@ -2978,23 +2978,23 @@ msgstr "標記最佳答案"
 
 #: const/__init__.py:148
 msgid "mentioned in the post"
-msgstr ""
+msgstr "已在張貼的內容提過"
 
 #: const/__init__.py:199
 msgid "question_answered"
-msgstr ""
+msgstr "問題已經回答"
 
 #: const/__init__.py:200
 msgid "question_commented"
-msgstr ""
+msgstr "有人對問題評論"
 
 #: const/__init__.py:201
 msgid "answer_commented"
-msgstr ""
+msgstr "有人對回答評論"
 
 #: const/__init__.py:202
 msgid "answer_accepted"
-msgstr ""
+msgstr "回答被標示為解答"
 
 #: const/__init__.py:206
 msgid "[closed]"
@@ -3017,11 +3017,15 @@ msgid "off"
 msgstr "關閉標籤篩選器"
 
 #: const/__init__.py:215
-msgid "exclude ignored"
+msgid "exclude ignored tags"
 msgstr "排除『忽略標籤』內容"
 
+#: const/__init__.py:215
+msgid "show all tags"
+msgstr "列出所有『標籤』內容"
+
 #: const/__init__.py:216
-msgid "only selected"
+msgid "only interesting tags"
 msgstr "只顯示『有興趣的標籤』內容"
 
 #: const/__init__.py:220
@@ -6723,6 +6727,10 @@ msgstr "關注的問題"
 #: skins/default/templates/widgets/scope_nav.html:8
 msgid "FOLLOWED"
 msgstr "關注"
+
+#: skins/default/templates/widgets/tag_selector.html:57
+msgid "Show only questions from"
+msgstr "依照以下方式篩選我有興趣的問題"
 
 #: skins/default/templates/widgets/scope_nav.html:11
 msgid "Please ask your question here"

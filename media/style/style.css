@@ -730,7 +730,7 @@ body.anon #searchBar .searchInputCancelable {
 .box img.gravatar {
   margin: 1px;
 }
-.box img.moneydj {
+img.moneydj {
   margin: 1px;
   position: absolute;
   z-index: 30;
