@@ -1775,7 +1775,7 @@ msgstr "在 \"登入\" 網頁顯示所有可以透過其他系統登入的方法
 
 #: conf/login_providers.py:31
 msgid "Always display local login form and hide \"Askbot\" button."
-msgstr "顯示本系統直接登入的方法 並隱藏 \"Askbot\" 按鈕"
+msgstr "顯示本系統直接登入的方法 並隱藏 \"嘉實知識+\" 按鈕"
 
 #: conf/login_providers.py:40
 msgid "Activate to allow login with self-hosted wordpress site"
