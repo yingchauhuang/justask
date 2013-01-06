@@ -103,9 +103,10 @@ def get_media_url(url, ignore_missing = False):
     #import datetime
     #before = datetime.datetime.now()
     url = urllib.unquote(unicode(url))
+    #logging.critical('YC1: %s' % url)
     #Modeify by YC to fix the SignatureDoesNotMatch issue
     url=url_fix(url)
-    
+    #logging.critical('YC2: %s' % url)
     while url[0] == '/': url = url[1:]
 
     #a hack allowing urls media stored on external locations to
