@@ -8,7 +8,6 @@ the lookup resolution process for templates and media works as follows:
 import os
 import logging
 import urllib
-import urlparse
 import askbot
 from askbot.utils import hasher
 from django.conf import settings as django_settings
@@ -105,6 +104,8 @@ def get_media_url(url, ignore_missing = False):
     url = urllib.unquote(unicode(url))
     while url[0] == '/': url = url[1:]
 
+    #Modeify by YC to fix the SignatureDoesNotMatch issue
+    url=url_fix(url)
     #a hack allowing urls media stored on external locations to
     #just pass through unchanged
     if url.startswith('http://') or url.startswith('https://'):
@@ -169,7 +170,7 @@ def get_media_url(url, ignore_missing = False):
     #after = datetime.datetime.now()
     #print after - before
     
-    return url_fix(url)
+    return url
 
 def update_media_revision(skin = None):
     """update skin media revision number based on the contents
@@ -211,7 +212,7 @@ def url_fix(s, charset='utf-8'):
     function can fix some of the problems in a similar way browsers
     handle data entered by the user:
 
-    >>> url_fix(u'http://de.wikipedia.org/wiki/Elf (Begriffsklarung)')
+    >>> url_fix(u'http://de.wikipedia.org/wiki/Elf (Begriffsklärung)')
     'http://de.wikipedia.org/wiki/Elf%20%28Begriffskl%C3%A4rung%29'
 
     :param charset: The target charset for the URL if the url was
