@@ -103,10 +103,11 @@ def get_media_url(url, ignore_missing = False):
     #import datetime
     #before = datetime.datetime.now()
     url = urllib.unquote(unicode(url))
-    while url[0] == '/': url = url[1:]
-
     #Modeify by YC to fix the SignatureDoesNotMatch issue
     url=url_fix(url)
+    
+    while url[0] == '/': url = url[1:]
+
     #a hack allowing urls media stored on external locations to
     #just pass through unchanged
     if url.startswith('http://') or url.startswith('https://'):
