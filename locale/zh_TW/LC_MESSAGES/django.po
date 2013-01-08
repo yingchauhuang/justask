@@ -285,6 +285,11 @@ msgstr "您輸入的通行碼不正確 !!!"
 msgid "post a comment"
 msgstr "提出問題"
 
+#: skins/default/templates/question.html:146
+#: skins/default/templates/widgets/ask_form.html:41
+msgid "Login/Signup to Post"
+msgstr "請進行登入以便張貼"
+
 #: skins\default\templates\question.html:283
 msgid "Click to enlarge"
 msgstr "點擊後圖片放大"
@@ -2782,7 +2787,7 @@ msgstr "若沒有被發表者接受為正確答案, 超過幾天後自動接受�
 
 #: conf/widgets.py:13
 msgid "Embeddable widgets"
-msgstr "可以讓其他網站鑲入的 widgets"
+msgstr "可以讓其他網站鑲入的小工具s"
 
 #: conf/widgets.py:25
 msgid "Number of questions to show"
@@ -2804,15 +2809,15 @@ msgstr ""
 
 #: conf/widgets.py:73
 msgid "CSS for the questions widget"
-msgstr "問題widget 的CSS"
+msgstr "設定小工具 的CSS"
 
 #: conf/widgets.py:81
 msgid "Header for the questions widget"
-msgstr "問題widget 的標題"
+msgstr "設定小工具 的標題"
 
 #: conf/widgets.py:90
 msgid "Footer for the questions widget"
-msgstr "問題widget 的尾標"
+msgstr "設定小工具 的尾標"
 
 #: const/__init__.py:10
 msgid "duplicate question"
@@ -3196,6 +3201,48 @@ msgstr "目前的密碼"
 #: deps/django_authopenid/views.py:361
 msgid "The password is not correct"
 msgstr "原密碼輸入錯誤, 請輸入正確 密碼"
+
+#: forms.py:327
+msgid "User name:"
+msgstr "使用者名稱:"
+
+#: forms.py:185
+msgid "must be"
+msgstr "內容必需"
+
+#: forms.py:327
+msgid "answer must be"
+msgstr "回答內容必需"
+
+#: forms.py:327
+msgid "title must be"
+msgstr "標題必需"
+
+#: forms.py:338
+msgid "question body must be"
+msgstr "問題內容必需"
+
+#: forms.py:338
+msgid "character"
+msgstr "字"
+
+#: forms.py:804
+msgid "characters"
+msgstr "字"
+
+#: forms.py:185,196
+msgid "word"
+msgstr "字"
+
+#: forms.py:186,197
+msgid "words"
+msgstr "字"
+
+#: forms.py:806
+msgid "To post on behalf of someone else, enter user name <strong>and</strong> email below."
+msgstr ""
+"若您要用其他帳號來回答(管理員權限), 請在下方輸入 使用者名稱<strong>and</strong> email."
+
 
 #: deps/django_authopenid/forms.py:346
 msgid ""
@@ -5786,7 +5833,7 @@ msgstr ""
 
 #: skins/default/templates/question/new_answer_form.html:43
 msgid "Login/Signup to Post Your Answer"
-msgstr "請 註冊或登入本系統 以便張貼"
+msgstr "請 註冊或登入本系統 以便回答"
 
 #: skins/default/templates/question/new_answer_form.html:48
 msgid "Answer the question"
@@ -5843,7 +5890,7 @@ msgid ""
 "<strong>Here</strong> (once you log in) you will be able to sign up for the "
 "periodic email updates about this question."
 msgstr ""
-"<strong>這裡</strong> (當您登入後)您可以訂閱的這個問題回答通知, 系統會通知您最新回答 !"
+"<strong>勾選這裡!!!</strong> (當您登入後)您可以訂閱的這個問題回答通知, 系統會通知您最新回答 !"
 
 #: skins/default/templates/question/sidebar.html:35
 msgid "subscribe to this question rss feed"
@@ -5904,9 +5951,9 @@ msgstr ""
 "當這個問題有任何回答時 請Email通知我 !"
 
 #: skins/default/templates/question/subscribe_by_email_prompt.html:11
-msgid "once you sign in you will be able to subscribe for any updates here"
+msgid "<span class='strong'>Here</span> (once you log in) you will be able to sign up for the periodic email updates about this question."
 msgstr ""
-"<strong>這裡</strong> (當您登入後)您可以訂閱定期的這個問題回答通知 !"
+"<span class='strong'>勾選這裡!!!</span> (當您登入後)您可以訂閱的這個問題回答的定期通知 !"
 
 #: skins/default/templates/user_profile/user.html:12
 #, python-format
@@ -6623,7 +6670,7 @@ msgstr ""
 
 #: skins/default/templates/widgets/ask_form.html:42
 msgid "Login/signup to post your question"
-msgstr "請進行登入以便發表"
+msgstr "請進行登入以便提出問題"
 
 #: skins/default/templates/widgets/ask_form.html:44
 msgid "Ask your question"
@@ -6764,8 +6811,8 @@ msgid "Editor Post"
 msgstr "發文"
 
 #: skins/default/templates/widgets/user_navigation.html:10
-msgid "login"
-msgstr "登入"
+msgid "Hi, there! Please sign in"
+msgstr "您尚未登入，請登入"
 
 #: skins/default/templates/widgets/user_navigation.html:14
 msgid "settings"
@@ -6774,6 +6821,19 @@ msgstr "設定"
 #: templatetags/extra_filters.py:145 templatetags/extra_filters_jinja.py:264
 msgid "no items in counter"
 msgstr "no"
+
+#: skins/default/templates/widgets/footer.html:40
+#: skins/default/templates/widgets/user_navigation.html:17
+msgid "help"
+msgstr "幫助"
+
+#: skins/default/templates/widgets/user_navigation.html:9
+msgid "sign out"
+msgstr "登出"
+
+#: skins/default/templates/widgets/user_navigation.html:24
+msgid "widgets"
+msgstr "小工具"
 
 #: utils/decorators.py:90 views/commands.py:112 views/commands.py:132
 msgid "Oops, apologies - there was some error"

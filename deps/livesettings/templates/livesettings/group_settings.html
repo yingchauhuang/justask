@@ -23,7 +23,8 @@
     </p>
 {% endif %}
 {% if form.fields %}
-<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
     <div class="module">
     <table summary="{% filter capfirst %}{% blocktrans with group.name as name %}Settings included in {{ name }}.{% endblocktrans %}{% endfilter %}" width="100%">
         {% for field in form %}

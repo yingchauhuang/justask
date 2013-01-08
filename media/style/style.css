@@ -1,3 +1,10 @@
+/* Moneydj CSS */
+.channel {
+font: 12px/1.6em Verdana, Lucida, Arial, Helvetica, KBC,sans-serif;
+text-align: center;
+color: #7C95A3;
+}
+
 @import url(jquery.autocomplete.css);
 /* General Predifined classes, read more in lesscss.org */
 /* Variables for Colors*/
@@ -576,7 +583,6 @@ body.anon #searchBar .searchInputCancelable {
 }
 #ContentLeft  .share-question{
   float: left;
-  position: relative;
   padding-bottom: 10px;
 }
 /* ----- Sidebar Widgets Box, check main_page/sidebar.html or question/sidebar.html ----- */
@@ -2576,6 +2582,11 @@ ul#related-tags li {
 }
 .question-page .message {
   padding: 5px;
+  margin: 0px 0 10px 0;
+}
+.question-page .subscribe_email {
+  padding: 5px;
+  float:left;
   margin: 0px 0 10px 0;
 }
 .facebook-share.icon,

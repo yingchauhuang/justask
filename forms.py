@@ -182,8 +182,8 @@ class CountedWordsField(forms.CharField):
         word_count = len(value.split())
         if word_count < self.min_words:
             msg = ungettext_lazy(
-                'must be > %d word',
-                'must be > %d words',
+                unicode(_('must be'))+unicode(' > %d ')+ unicode(_('word')),
+                unicode(_('must be'))+unicode(' > %d ')+ unicode(_('words')),
                 self.min_words - 1
             ) % (self.min_words - 1)
             #todo - space is not used in Chinese
@@ -193,8 +193,8 @@ class CountedWordsField(forms.CharField):
 
         if word_count > self.max_words:
             msg = ungettext_lazy(
-                'must be < %d word',
-                'must be < %d words',
+                unicode(_('must be'))+unicode(' < %d ')+ unicode(_('word')),
+                unicode(_('must be'))+unicode(' < %d ')+ unicode(_('words')),
                 self.max_words + 1
             ) % (self.max_words + 1)
             raise forms.ValidationError(
@@ -240,8 +240,8 @@ class TitleField(forms.CharField):
             value = ''
         if len(value) < askbot_settings.MIN_TITLE_LENGTH:
             msg = ungettext_lazy(
-                'title must be > %d character',
-                'title must be > %d characters',
+                unicode(_('title must be'))+unicode(' > %d ')+ unicode(_('character')),
+                unicode(_('title must be'))+unicode(' > %d ')+ unicode(_('characters')),
                 askbot_settings.MIN_TITLE_LENGTH
             ) % askbot_settings.MIN_TITLE_LENGTH
             raise forms.ValidationError(msg)
@@ -324,9 +324,9 @@ class QuestionEditorField(EditorField):
                                 user=user, *args, **kwargs
                             )
         self.length_error_template_singular = \
-            'question body must be > %d character'
+            unicode(_('question body must be'))+unicode(' > %d ')+ unicode(_('character'))
         self.length_error_template_plural = \
-            'question body must be > %d characters'
+            unicode(_('question body must be'))+unicode(' > %d ')+ unicode(_('characters'))
         self.min_length = askbot_settings.MIN_QUESTION_BODY_LENGTH
 
 
@@ -335,8 +335,8 @@ class AnswerEditorField(EditorField):
 
     def __init__(self, *args, **kwargs):
         super(AnswerEditorField, self).__init__(*args, **kwargs)
-        self.length_error_template_singular = 'answer must be > %d character'
-        self.length_error_template_plural = 'answer must be > %d characters'
+        self.length_error_template_singular = unicode(_('answer must be'))+unicode(' > %d ')+ unicode(_('character'))
+        self.length_error_template_plural = unicode(_('answer must be'))+unicode(' > %d ')+ unicode(_('characters'))
         self.min_length = askbot_settings.MIN_ANSWER_BODY_LENGTH
 
 
