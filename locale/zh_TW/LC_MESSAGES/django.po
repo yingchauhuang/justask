@@ -4883,7 +4883,7 @@ msgstr ""
 
 #: skins/default/templates/faq_static.html:5
 msgid "Frequently Asked Questions "
-msgstr ""
+msgstr "最常見的問題"
 
 #: skins/default/templates/faq_static.html:6
 msgid "What kinds of questions can I ask here?"
@@ -6574,7 +6574,7 @@ msgstr "小技巧"
 
 #: skins/default/templates/widgets/answer_edit_tips.html:6
 msgid "please make your answer relevant to this community"
-msgstr "問問題時請思考 本「知識+」所關注的議題 儘量與議題相關"
+msgstr "回答問題時 請關注解決使用著的實際操作及疑難排除"
 
 msgid "give an answer interesting to this community"
 msgstr "問問題時請思考 本「知識+」所關注的議題 儘量與議題相關"
@@ -6595,10 +6595,14 @@ msgstr "請提供足夠的問題細節，如果有畫面Copy或Log更好"
 msgid "be clear and concise"
 msgstr "陳述儘量簡潔及清楚"
 
+msgid "ask a question interesting to this community"
+msgstr "問問題時請思考 本「知識+」所關注或感興趣的議題 儘量與議題相關"
+
 #: skins/default/templates/widgets/answer_edit_tips.html:20
 #: skins/default/templates/widgets/question_edit_tips.html:16
 msgid "see frequently asked questions"
 msgstr "請見常見問題"
+
 #: skins/default/templates/widgets/answer_edit_tips.html:27
 #: skins/default/templates/widgets/question_edit_tips.html:22
 msgid "Markdown tips"
@@ -6843,7 +6847,7 @@ msgid "Editor Post"
 msgstr "發文"
 
 #: skins/default/templates/widgets/user_navigation.html:10
-msgid "Hi, there! Please sign in"
+msgid "Hi there! Please sign in"
 msgstr "您尚未登入，請登入"
 
 #: skins/default/templates/widgets/user_navigation.html:14
