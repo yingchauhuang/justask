@@ -311,7 +311,7 @@ body.user-messages {
 #metaNav a.special {
   font-size: 18px;
   color: #B02B2C;
-  font-weight: bold;
+  
   text-decoration: none;
 }
 #metaNav a.special:hover {
@@ -620,10 +620,10 @@ body.anon #searchBar .searchInputCancelable {
   width: 190px;
 }
 .box h3 {
-  color: #fbfbb4;
+  color: #0947ad;
   font-size: 18px;
   text-align: left;
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   padding-left: 0px;
 }
