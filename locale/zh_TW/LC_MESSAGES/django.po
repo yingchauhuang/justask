@@ -101,7 +101,7 @@ msgstr ""
 "\n"
 "<span class=\"strong big\">您針對 </span> <i>\"<strong>%(title)s</"
 "strong> %(summary)s...\"</i> 的回答<span class=\"strong big\">已經儲存 "
-"並會在您下次登入時貼到論壇.</span>"
+"並會在您下次登入時貼到「知識+」.</span>"
 
 #: skins/common/templates/authopenid/signin.html:21
 #, python-format
@@ -112,7 +112,7 @@ msgid ""
 msgstr ""
 "<span class=\"strong big\">您所提的問題</span> <i>\"<strong>%(title)s</"
 "strong> %(summary)s...\"</i> <span class=\"strong big\">已經儲存 "
-"並會在您下次登入時貼到論壇.</span>"
+"並會在您下次登入時貼到「知識+」.</span>"
 
 #: skins\common\templates\authopenid\sigin.html:28
 msgid ""
@@ -144,7 +144,7 @@ msgstr "透過點擊以下圖示,可以選擇您最常用的帳號來進行登�
 msgid ""
 "Click on one of the icons below to add a new login method or re-validate an "
 "existing one."
-msgstr "透過點擊以下圖示,可以增加您進行登入論壇的方法,或重新設定您的登入方式 "
+msgstr "透過點擊以下圖示,可以增加您進行登入「知識+」的方法,或重新設定您的登入方式 "
 
 #: skins/common/templates/authopenid/signin.html:39
 msgid ""
@@ -932,7 +932,7 @@ msgid "Individually selected"
 msgstr "我所選定的問題"
 #: forms.py:1038
 msgid "Entire forum (tag filtered)"
-msgstr "整個論壇 (透過標籤篩選)"
+msgstr "整個「知識+」 (透過標籤篩選)"
 
 #: forms.py:1042
 msgid "Comments and posts mentioning me"
@@ -1125,7 +1125,7 @@ msgstr "權限控制"
 
 #: conf/access_control.py:17
 msgid "Allow only registered user to access the forum"
-msgstr "只有註冊用戶才能參加論壇"
+msgstr "只有註冊用戶才能參加「知識+」"
 
 
 
@@ -1461,7 +1461,7 @@ msgid ""
 "a>"
 msgstr ""
 "請到 <a href=\"%(url)s\">twitter applications site</"
-"a> 註冊您的論壇"
+"a> 註冊您的「知識+」"
 
 #: conf/external_keys.py:118
 msgid "Twitter consumer secret"
@@ -1476,7 +1476,7 @@ msgstr ""
 msgid ""
 "Please register your forum at <a href=\"%(url)s\">LinkedIn developer site</a>"
 msgstr ""
-"請到 <a href=\"%(url)s\">LinkedIn developer site</a>註冊您的論壇"
+"請到 <a href=\"%(url)s\">LinkedIn developer site</a>註冊您的「知識+」"
 
 #: conf/external_keys.py:139
 msgid "LinkedIn consumer secret"
@@ -1494,7 +1494,7 @@ msgid ""
 "site</a>"
 msgstr ""
 "請到 <a href=\"%(url)s\">Identi.ca applications "
-"site</a>註冊您的論壇"
+"site</a>註冊您的「知識+」"
 
 #: conf/external_keys.py:160
 msgid "ident.ca consumer secret"
@@ -1522,7 +1522,7 @@ msgstr "預設網頁 - 關於, 隱私權, Q&A 等等"
 
 #: conf/flatpages.py:19
 msgid "Text of the Q&A forum About page (html format)"
-msgstr "關於本論壇的說明頁(html 格式)"
+msgstr "關於本「知識+」的說明頁(html 格式)"
 
 #: conf/flatpages.py:22
 msgid ""
@@ -1534,7 +1534,7 @@ msgstr ""
 
 #: conf/flatpages.py:32
 msgid "Text of the Q&A forum FAQ page (html format)"
-msgstr "關於本論壇的問題與回答(html 格式)"
+msgstr "關於本「知識+」的問題與回答(html 格式)"
 
 #: conf/flatpages.py:35
 msgid ""
@@ -1546,7 +1546,7 @@ msgstr ""
 
 #: conf/flatpages.py:46
 msgid "Text of the Q&A forum Privacy Policy (html format)"
-msgstr "關於本論壇的隱私權政策(html 格式)"
+msgstr "關於本「知識+」的隱私權政策(html 格式)"
 
 #: conf/flatpages.py:49
 msgid ""
@@ -1614,7 +1614,7 @@ msgid ""
 "This setting will help import data from other forums such as zendesk, when "
 "automatic data import fails to detect the original question correctly."
 msgstr ""
-"此設定允許從其他論壇匯入資料 如: zendesk, 當自動匯入時 會偵測原始資料是否正確 "
+"此設定允許從其他「知識+」匯入資料 如: zendesk, 當自動匯入時 會偵測原始資料是否正確 "
 
 #: conf/forum_data_rules.py:87
 msgid "Maximum length of tag (number of characters)"
@@ -1771,7 +1771,7 @@ msgstr "智慧財產權Logo圖像"
 
 #: conf/login_providers.py:13
 msgid "Login provider setings"
-msgstr "登入論壇方法設定"
+msgstr "登入「知識+」方法設定"
 
 #: conf/login_providers.py:22
 msgid ""
@@ -1780,7 +1780,7 @@ msgstr "在 \"登入\" 網頁顯示所有可以透過其他系統登入的方法
 
 #: conf/login_providers.py:31
 msgid "Always display local login form and hide \"Askbot\" button."
-msgstr "顯示本系統直接登入的方法 並隱藏 \"嘉實知識+\" 按鈕"
+msgstr "顯示本系統直接登入的方法 並隱藏 \"嘉實\" 按鈕"
 
 #: conf/login_providers.py:40
 msgid "Activate to allow login with self-hosted wordpress site"
@@ -2229,7 +2229,7 @@ msgid ""
 "more suitable for the smaller communities, <strong>WARNING:</strong> your "
 "current value for Minimum reputation, Bagde Settings and Vote Rules will be "
 "changed after you modify this setting."
-msgstr "初始模式是針對 比較小的及剛起步的 論壇, 給予比較少的積分及勳章. "
+msgstr "初始模式是針對 比較小的及剛起步的 「知識+」, 給予比較少的積分及勳章. "
 	   "<strong>注意:</strong> 您對於積分及勳章設定等規則,會因為您更更選"
 	   "這個項目而改變設定"
 
@@ -2239,7 +2239,7 @@ msgstr "靈龜穩賺網"
 
 #: conf/site_settings.py:12
 msgid "Keepwin,Stock,Investment,Taiwan Stock,CNPROG,forum,community"
-msgstr "靈龜穩賺網,股票,投資,台股,論壇"
+msgstr "靈龜穩賺網,股票,投資,台股,「知識+」"
 
 #: conf/site_settings.py:12
 msgid "Keepwin copyright, 2012-2016."
@@ -2247,7 +2247,7 @@ msgstr "靈龜穩賺網 版權所有, 2012-2016."
 
 #: conf/site_settings.py:12
 msgid "Taiwan Stock Forum exchange investment"
-msgstr "台灣股市 論壇 股市 投資"
+msgstr "台灣股市 「知識+」 股市 投資"
 
 #: conf/site_settings.py:12
 msgid "Welcome you to Keepwin Forum !!!"
@@ -2259,11 +2259,11 @@ msgstr "連結, 關鍵字 及 歡迎訊息"
 
 #: conf/site_settings.py:21
 msgid "Site title for the Q&A forum"
-msgstr "論壇歡迎標題"
+msgstr "「知識+」歡迎標題"
 
 #: conf/site_settings.py:30
 msgid "Comma separated list of Q&A site keywords"
-msgstr "請用逗號來隔開 論壇關鍵字"
+msgstr "請用逗號來隔開 「知識+」關鍵字"
 
 #: conf/site_settings.py:39
 msgid "Copyright message to show in the footer"
@@ -2271,15 +2271,15 @@ msgstr "在頁尾要顯示的版權訊息"
 
 #: conf/site_settings.py:49
 msgid "Site description for the search engines"
-msgstr "方便搜索引擎搜尋的論壇描述"
+msgstr "方便搜索引擎搜尋的「知識+」描述"
 
 #: conf/site_settings.py:58
 msgid "Short name for your Q&A forum"
-msgstr "論壇簡稱"
+msgstr "「知識+」簡稱"
 
 #: conf/site_settings.py:68
 msgid "Base URL for your Q&A forum, must start with http or https"
-msgstr "論壇的首頁網址, 必須用http 或 https 當作開頭"
+msgstr "「知識+」的首頁網址, 必須用http 或 https 當作開頭"
 
 #: conf/site_settings.py:79
 msgid "Check to enable greeting for anonymous user"
@@ -2416,7 +2416,7 @@ msgstr "Logo 跟 網頁標題的部分"
 
 #: conf/skin_general_settings.py:23
 msgid "Q&A site logo"
-msgstr "論壇Logo"
+msgstr "「知識+」Logo"
 
 #: conf/skin_general_settings.py:23
 msgid "Show advertisement block in main area"
@@ -2465,7 +2465,7 @@ msgstr "顯示Logo"
 msgid ""
 "Check if you want to show logo in the forum header or uncheck in the case "
 "you do not want the logo to appear in the default location"
-msgstr "若您要在論壇標題顯示Logo,請將本選項打勾. "
+msgstr "若您要在「知識+」標題顯示Logo,請將本選項打勾. "
 
 #: conf/skin_general_settings.py:53
 msgid "Site favicon"
@@ -2492,14 +2492,14 @@ msgstr "一個 88*38 的圖像將會被用來 登入畫面上, 作為密碼登�
 
 #: conf/skin_general_settings.py:90
 msgid "Show all UI functions to all users"
-msgstr "將所有論壇的功能, 都開放給使用者使用"
+msgstr "將所有「知識+」的功能, 都開放給使用者使用"
 
 #: conf/skin_general_settings.py:92
 msgid ""
 "If checked, all forum functions will be shown to users, regardless of their "
 "reputation. However to use those functions, moderation rules, reputation and "
 "other limits will still apply."
-msgstr "如果您選了這個選項, 不管他們的積分如何 使用者將會看到這個論壇的所有功能.  "
+msgstr "如果您選了這個選項, 不管他們的積分如何 使用者將會看到這個「知識+」的所有功能.  "
 "不過系統使用權限設定在這裡仍然有效"
 
 #: conf/skin_general_settings.py:107
@@ -3469,7 +3469,7 @@ msgstr "請透過以下連結檢查您的email 是否正確"
 
 #: deps/livesettings/models.py:101 deps/livesettings/models.py:140
 msgid "Site"
-msgstr "論壇"
+msgstr "「知識+」"
 
 #: deps/livesettings/values.py:68
 msgid "Main"
@@ -3645,7 +3645,7 @@ msgid""
 "Please visit the askbot and see what's new! Could you spread the word about "
 "it - can somebody you know help answering those questions or benefit from "
 "posting one?"
-msgstr " 請參觀論壇, 觀看新功能介紹! 並廣為宣傳 - 能否回答或從中獲益?"
+msgstr " 請參觀「知識+」, 觀看新功能介紹! 並廣為宣傳 - 能否回答或從中獲益?"
 
 #: management/commands/send_email_alerts.py:465
 msgid ""
@@ -3675,7 +3675,7 @@ msgstr "請至  %(link)s 更改收信頻率或管理者的 %(email)s "
 "<p>您可以透過 <a href='%(email_settings_link)s'>更改收信頻率</a>  "
 "來調整發信頻率或關閉他.<br/>如果您發現這封信是寄送錯誤的信件 "
 "請立刻通知系統管理員 %(admin_email)s.</"
-"p><p>此致,</p><p>您的友善的論壇.</p>"
+"p><p>此致,</p><p>您的友善的「知識+」.</p>"
 
 #: management/commands/send_unanswered_question_reminders.py:56
 #, python-format
@@ -3903,7 +3903,7 @@ msgstr "熱血青年"
 
 #: models/badges.py:714
 msgid "Visited site every day for %(num)s days in a row"
-msgstr "持續%(num)s 天每天訪問論壇"
+msgstr "持續%(num)s 天每天訪問「知識+」"
 
 #: models/badges.py:732
 msgid "Commentator"
@@ -4084,7 +4084,7 @@ msgstr "忽略"
 
 #: models/user.py:264
 msgid "Entire forum"
-msgstr "這論壇"
+msgstr "這「知識+」"
 
 #: models/user.py:265
 msgid "Questions that I asked"
@@ -4152,8 +4152,8 @@ msgstr ""
 msgid "here is why email is required, see %(gravatar_faq_url)s"
 msgstr ""
 "<span class='strong big'>請在下面填入您新的 EMail地址.</"
-"span> 有效的EMail地址 是本 Q&amp;A 論壇所必需的. 如果您要的話, "
-"您可以針對您有興趣的問題或論壇透過EMail <strong>收到更新</strong>"
+"span> 有效的EMail地址 是本 Q&amp;A 「知識+」所必需的. 如果您要的話, "
+"您可以針對您有興趣的問題或「知識+」透過EMail <strong>收到更新</strong>"
 "而且, 您的 EMail 用來取得您獨特的<a href='%(gravatar_faq_url)s'>"
 "<strong>圖像</strong></a> 來代表您的帳號. 您的 EMail地址 不會揭露給任何人."
 
@@ -4194,7 +4194,7 @@ msgid "validate %(email)s info or go to %(change_email_url)s"
 msgstr ""
 "<span class=\"strong big\">一封有驗證連結的信件已經送到您的信箱 "
 "%(email)s.</span> 請透過瀏覽器<strong>開啟驗證連結</strong>"
-"Email 驗證是本系統維持 <span class=\"orange\">論壇</span>的必要措施."
+"Email 驗證是本系統維持 <span class=\"orange\">「知識+」</span>的必要措施."
 "若您要使用<strong>其他信箱</strong>, 請到 <a "
 "href='%(change_email_url)s'><strong>更改信箱</strong></a>進行變更."
 
@@ -4274,9 +4274,9 @@ msgid ""
 msgstr ""
 "<p><span class='strong big'>看起來您指定的 %(username)s 顯示名稱 已經被其他人使用了. "
 "</span></p><p>請針對您的 %(provider)s 帳號再 輸入一次您要的 顯示名稱"
-"並且, 一個有效的 EMail 地址是本<span class='orange'>Q&amp;A</span>論壇不可或缺的要件."
+"並且, 一個有效的 EMail 地址是本<span class='orange'>Q&amp;A</span>「知識+」不可或缺的要件."
 "您的 EMail 用來連結您專屬的 <a href='%(gravatar_faq_url)s'><strong>圖像</"
-"strong></a>. 而且您可以透過 <strong>EMail 訂閱設定</strong> 來訂閱您整個論壇及您有興趣"
+"strong></a>. 而且您可以透過 <strong>EMail 訂閱設定</strong> 來訂閱您整個「知識+」及您有興趣"
 "的問題. EMail 地址將不會顯示給其他人, 除非您設定成願意分享給別人.</p>"
 
 #: skins/common/templates/authopenid/complete.html:34
@@ -4320,13 +4320,13 @@ msgstr ""
 #: skins/common/templates/authopenid/signup_with_password.html:36
 msgid "receive updates motivational blurb"
 msgstr ""
-"<strong>透過EMail收到論壇更新</strong> - 這會幫助我們論壇成長茁壯."
-"<br/>我們初始設定<span class='orange'>Q&amp;A</span> 論壇 若有更新時 <strong>每周送出摘要 "
+"<strong>透過EMail收到「知識+」更新</strong> - 這會幫助我們「知識+」成長茁壯."
+"<br/>我們初始設定<span class='orange'>Q&amp;A</span> 「知識+」 若有更新時 <strong>每周送出摘要 "
 "</strong>.<br/>當然您可以隨時透過您帳號設定去調整更新頻率."
 
 #: skins/common/templates/authopenid/complete.html:78
 msgid "<strong>Receive forum updates by email</strong>"
-msgstr "<strong>透過EMail收到論壇更新</strong>"
+msgstr "<strong>透過EMail收到「知識+」更新</strong>"
 
 #: skins/common/templates/authopenid/complete.html:82
 #: skins/common/templates/authopenid/signup_with_password.html:40
@@ -4344,7 +4344,7 @@ msgstr "建立帳號"
 #: skins/common/templates/authopenid/confirm_email.txt:1
 #: skins/old/templates/authopenid/confirm_email.txt:1
 msgid "Thank you for registering at our Q&A forum!"
-msgstr "感謝你加入我們的 Q&A 論壇"
+msgstr "感謝你加入我們的 Q&A 「知識+」"
 
 #: skins/common/templates/authopenid/confirm_email.txt:3
 #: skins/old/templates/authopenid/confirm_email.txt:3
@@ -4375,17 +4375,17 @@ msgid ""
 "Forum Administrator"
 msgstr ""
 "你好, \n"
-" 論壇管理者"
+" 「知識+」管理者"
 
 #: skins/common/templates/authopenid/email_validation.txt:1
 #: skins/old/templates/authopenid/email_validation.txt:1
 msgid "Greetings from the Q&A forum"
-msgstr "歡迎您進入論壇"
+msgstr "歡迎您進入「知識+」"
 
 #: skins/common/templates/authopenid/email_validation.txt:3
 #: skins/old/templates/authopenid/email_validation.txt:3
 msgid "To make use of the Forum, please follow the link below:"
-msgstr "請依下列指引使用論壇: "
+msgstr "請依下列指引使用「知識+」: "
 
 #: skins/common/templates/authopenid/email_validation.txt:7
 #: skins/old/templates/authopenid/email_validation.txt:7
@@ -4444,7 +4444,7 @@ msgstr "建立一個新的使用者帳號及密碼"
 #: skins/common/templates/authopenid/signup_with_password.html:26
 msgid "Traditional signup info"
 msgstr ""
-"<span class='strong big'>如果您要的話, 請在這裡建立您的論壇登入帳號及密碼. "
+"<span class='strong big'>如果您要的話, 請在這裡建立您的「知識+」登入帳號及密碼. "
 "不過</span>, 請瞭解我們也支援 <strong>OpenID</strong> 登入方式. 透過<strong>OpenID</strong> 您可以"
 "透過您的其他帳號 (e.g. Gmail 或 Facebook) 不需要提供您的帳號明細或記新的帳號密碼"
 "就可以完成登入."
@@ -4816,7 +4816,7 @@ msgstr "徽章"
 
 #: skins/default/templates/badges.html:7
 msgid "Community gives you awards for your questions, answers and votes."
-msgstr "本論壇根據您的『問題』、『回答』、『評分』授予徽章"
+msgstr "本「知識+」根據您的『問題』、『回答』、『評分』授予徽章"
 #: skins/default/templates/badges.html:8
 #, python-format
 msgid ""
@@ -4829,7 +4829,7 @@ msgstr ""
 "請不吝給我們<a href='%(feedback_faq_url)s'>回饋</a>\n"
 #: skins/default/templates/badges.html:35
 msgid "Community badges"
-msgstr "論壇徽章"
+msgstr "「知識+」徽章"
 
 #: skins/default/templates/badges.html:37
 msgid "gold badge: the highest honor and is very rare"
@@ -4838,7 +4838,7 @@ msgstr "金牌徽章: 非常罕見的最高榮譽"
 #: skins/default/templates/badges.html:40
 msgid "gold badge description"
 msgstr ""
-"金牌徽章是本論壇的最高榮譽. 除了要有專業的知識及解決問題的能力 "
+"金牌徽章是本「知識+」的最高榮譽. 除了要有專業的知識及解決問題的能力 "
 "更要活躍的參與各項活動."
 
 #: skins/default/templates/badges.html:45
@@ -4955,8 +4955,8 @@ msgstr "積分機制如何運作?"
 msgid "Rep system summary"
 msgstr ""
 "當某個問題或回答收到『水唷』的評價, 使用者會增加積分 "
-"我們透過這些積分機制來衡量論壇對使用者的信任及評價 "
-"您在論壇中的各種操作將會影響您的積分 "
+"我們透過這些積分機制來衡量「知識+」對使用者的信任及評價 "
+"您在「知識+」中的各種操作將會影響您的積分 "
 
 #: skins/default/templates/faq_static.html:22
 #, python-format
@@ -5236,12 +5236,12 @@ msgstr ""
 "<div>%(content_preview)s</div>\n"
 "<p>請注意 - 您可以透過 <a href=\"%(user_subscriptions_url)s"
 "\">變更</a>\n"
-"來更改收到通知的頻率及訂閱設定. 謝謝您對本論壇的支持及興趣 "
+"來更改收到通知的頻率及訂閱設定. 謝謝您對本「知識+」的支持及興趣 "
 "!</p>\n"
 
 #: skins/default/templates/instant_notification.html:42
 msgid "<p>Sincerely,<br/>Forum Administrator</p>"
-msgstr "<p>此致,<br/>論壇系統管理員</p>"
+msgstr "<p>此致,<br/>「知識+」系統管理員</p>"
 
 #: skins/default/templates/macros.html:3
 #, python-format
@@ -5442,7 +5442,7 @@ msgstr "標籤可以協助內容更有組織及搜尋更精準"
 
 #: skins/default/templates/question_retag.html:32
 msgid "tag editors receive special awards from the community"
-msgstr "協助標籤的使用者論壇會頒給特別的勳章"
+msgstr "協助標籤的使用者「知識+」會頒給特別的勳章"
 
 #: skins/default/templates/question_retag.html:59
 msgid "up to 5 tags, less than 20 characters each"
@@ -6025,7 +6025,7 @@ msgstr "Email 訂閱設定資訊"
 msgid "<span class='big strong'>Adjust frequency of email updates.</span> Receive updates on interesting questions by email, <strong><br/>help the community</strong> by answering questions of your colleagues. If you do not wish to receive emails - select 'no email' on all items below.<br/>Updates are only sent when there is any new activity on selected items."
 msgstr ""
 "<span class='big strong'>調整Email頻率.</span> 透過Email收到我所感興趣的問題更新 "
-", 透過回答同伴的問題來<strong><br/>幫助論壇</strong>."
+", 透過回答同伴的問題來<strong><br/>幫助「知識+」</strong>."
 "如果您不要收到任何Email, 在所有的選項中選擇 '不要寄送Email' .<br/>"
 "只有在您選擇的項目中有更新才會通知您."
 
@@ -6049,7 +6049,7 @@ msgstr ""
 #: skins/default/templates/user_profile/user_inbox.html:38
 #, python-format
 msgid "forum responses (%(re_count)s)"
-msgstr "論壇回覆(%(re_count)s) 次"
+msgstr "「知識+」回覆(%(re_count)s) 次"
 
 #: skins/default/templates/user_profile/user_inbox.html:43
 #, python-format
@@ -6568,20 +6568,32 @@ msgstr "評分"
 #: skins/default/templates/widgets/answer_edit_tips.html:3
 msgid "answer tips"
 msgstr "回答小技巧"
+
+msgid "Tips"
+msgstr "小技巧"
+
 #: skins/default/templates/widgets/answer_edit_tips.html:6
 msgid "please make your answer relevant to this community"
-msgstr "問問題時請思考 本論壇所關注的議題 儘量與議題相關"
+msgstr "問問題時請思考 本「知識+」所關注的議題 儘量與議題相關"
+
+msgid "give an answer interesting to this community"
+msgstr "問問題時請思考 本「知識+」所關注的議題 儘量與議題相關"
 
 #: skins/default/templates/widgets/answer_edit_tips.html:9
 msgid "try to give an answer, rather than engage into a discussion"
 msgstr "請直接回答問題, 儘量不要根據問題再提出問題"
+
 #: skins/default/templates/widgets/answer_edit_tips.html:12
 msgid "please try to provide details"
 msgstr "請提供足夠的問題細節"
+
+msgid "provide enough details"
+msgstr "請提供足夠的問題細節，如果有畫面Copy或Log更好"
+
 #: skins/default/templates/widgets/answer_edit_tips.html:15
 #: skins/default/templates/widgets/question_edit_tips.html:11
 msgid "be clear and concise"
-msgstr "請簡潔及清楚的陳述"
+msgstr "陳述儘量簡潔及清楚"
 
 #: skins/default/templates/widgets/answer_edit_tips.html:20
 #: skins/default/templates/widgets/question_edit_tips.html:16
@@ -6656,6 +6668,26 @@ msgstr ""
 "本系統註冊及登入非常簡單. 您只需幾秒鐘就可以"
 "完成 (初次登入需要比較多的時間)."
 
+#: skins/default/templates/widgets/ask_form.html:7
+msgid ""
+"<span class=\\\"strong big\\\">You are welcome to start submitting your "
+"question anonymously</span>. When you submit the post, you will be "
+"redirected to the login/signup page. Your question will be saved in the "
+"current session and will be published after you log in. Login/signup process "
+"is very simple. Login takes about 30 seconds, initial signup takes a minute "
+"or less."
+msgstr ""
+"<span class=\\\"strong big\\\">歡迎您在沒有登入狀態下提出問題</span> "
+"    當您選擇送出問題, 您將會被轉至登入畫面 "
+"您張貼的內容會被保存, 然後在登入後才會被張貼"
+"本系統註冊及登入非常簡單. 您只需幾秒鐘就可以"
+"完成 (初次登入需要比較多的時間)."
+
+#: skins/default/templates/widgets/answer_edit_tips.html:27
+#: skins/default/templates/widgets/question_edit_tips.html:22
+msgid "Markdown basics"
+msgstr "編輯標記参考說明"
+
 #: skins/default/templates/widgets/ask_form.html:10
 #, python-format
 msgid "<span class='strong big'>Looks like your email address, %(email)s has not yet been validated.</span> "
@@ -6727,7 +6759,7 @@ msgstr "發表小秘訣"
 
 #: skins/default/templates/widgets/question_edit_tips.html:5
 msgid "please ask a relevant question"
-msgstr "請提出與本論壇有關的問題"
+msgstr "請提出與本「知識+」有關的問題"
 #: skins/default/templates/widgets/question_edit_tips.html:8
 msgid "please try provide enough details"
 msgstr "請儘量地清楚描述您的問題"
