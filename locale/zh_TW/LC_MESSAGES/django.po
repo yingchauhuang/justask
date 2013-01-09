@@ -3169,6 +3169,10 @@ msgstr "教育程度"
 msgid "Occupational"
 msgstr "職業"
 
+#: utils/forms.py:60
+msgid "Choose a screen name"
+msgstr "選擇一個使用者名稱"
+
 #: deps/django_authopenid/forms.py:233
 msgid "Please enter your %(username_token)s"
 msgstr "請輸入您的%(username_token)s"
@@ -3299,7 +3303,7 @@ msgstr "打開"
 
 #: deps/django_authopenid/util.py:378
 msgid "%(site)s user name and password"
-msgstr "使用%(site)s帳號密碼登錄"
+msgstr "%(site)s帳號及密碼"
 
 #: deps/django_authopenid/util.py:384
 #: skins/common/templates/authopenid/signin.html:108
@@ -4125,9 +4129,13 @@ msgstr "請輸入您的 <span>使用者名稱</span>, 然後註冊"
 msgid "(or select another login method above)"
 msgstr "(或者 選擇列在上面的其他登入方法)"
 
+#: skins/common/templates/authopenid/signin.html:89
+msgid "or enter your <span>user name and password</span>, then sign in"
+msgstr "或者使用您在本網站的 <span>帳號及密碼</span>, 進行登入"
+
 #: skins/common/templates/authopenid/authopenid_macros.html:56
 msgid "Sign in"
-msgstr "註冊"
+msgstr "登入"
 
 #: skins/common/templates/authopenid/changeemail.html:2
 #: skins/common/templates/authopenid/changeemail.html:8
