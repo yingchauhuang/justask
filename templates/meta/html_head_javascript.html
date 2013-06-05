@@ -31,4 +31,7 @@
     {% endif %}
     askbot['messages'] = {};
 </script>
+{% if settings.EDITOR_TYPE == 'tinymce' %}
+	<script type='text/javascript' src='{{"/js/tinymce/tiny_mce.js"|media}}'></script>
+{% endif %}
 {# avoid adding javascript here so that pages load faster #}

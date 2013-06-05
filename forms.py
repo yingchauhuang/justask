@@ -15,6 +15,7 @@ from askbot.utils.forms import NextUrlField, UserNameField
 from askbot.mail import extract_first_email_address
 from recaptcha_works.fields import RecaptchaField
 from askbot.conf import settings as askbot_settings
+#from django.conf import settings as django_settings
 from askbot.conf import get_tag_display_filter_strategy_choices
 from tinymce.widgets import TinyMCE
 import logging
@@ -286,6 +287,11 @@ class EditorField(forms.CharField):
         if askbot_settings.EDITOR_TYPE == 'markdown':
             self.widget = forms.Textarea(attrs=widget_attrs)
         elif askbot_settings.EDITOR_TYPE == 'tinymce':
+            #if hasattr(django_settings, 'LANGUAGE_CODE'):
+            #    content_language =django_settings.LANGUAGE_CODE
+            #else:
+            #    content_language = 'en'
+            #self.widget = TinyMCE(attrs=widget_attrs, content_language=content_language,mce_attrs=editor_attrs)
             self.widget = TinyMCE(attrs=widget_attrs, mce_attrs=editor_attrs)
         self.label  = _('content')
         self.help_text = u''
