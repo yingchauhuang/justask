@@ -1135,38 +1135,38 @@ msgstr "徽章設定"
 
 #: conf/badges.py:23
 msgid "Disciplined: minimum upvotes for deleted post"
-msgstr "自我規範: 自己刪除掉的內容也至少獲得幾次『負評』"
+msgstr "自我規範: 自己刪除掉的內容也至少獲得幾次『正評』"
 
 #: conf/badges.py:32
 msgid "Peer Pressure: minimum downvotes for deleted post"
-msgstr "同儕壓力: 自己刪除掉的內容也至少獲得幾次『噓』 "
+msgstr "同儕壓力: 自己刪除掉的內容也至少獲得幾次『負評』 "
 
 #: conf/badges.py:41
 msgid "Teacher: minimum upvotes for the answer"
-msgstr "老師: 回答最少要獲得幾次『負評』"
+msgstr "老師: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:50
 msgid "Nice Answer: minimum upvotes for the answer"
-msgstr "妙答: 回答最少要獲得幾次『負評』"
+msgstr "妙答: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:59
 msgid "Good Answer: minimum upvotes for the answer"
-msgstr "好回答: 回答最少要獲得幾次『負評』"
+msgstr "好回答: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:68
 msgid "Great Answer: minimum upvotes for the answer"
-msgstr "精闢答案: 回答最少要獲得幾次『負評』"
+msgstr "精闢答案: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:77
 msgid "Nice Question: minimum upvotes for the question"
-msgstr "妙問: 問題最少要獲得幾次『負評』"
+msgstr "妙問: 問題最少要獲得幾次『正評』"
 #: conf/badges.py:86
 msgid "Good Question: minimum upvotes for the question"
-msgstr "好問題: 問題最少要獲得幾次『負評』"
+msgstr "好問題: 問題最少要獲得幾次『正評』"
 
 #: conf/badges.py:95
 msgid "Great Question: minimum upvotes for the question"
-msgstr "問的極好: 問題最少要獲得幾次『負評』"
+msgstr "問的極好: 問題最少要獲得幾次『正評』"
 
 #: conf/badges.py:104
 msgid "Popular Question: minimum views"
@@ -1181,22 +1181,22 @@ msgid "Famous Question: minimum views"
 msgstr "著名問題: 問題最少要被瀏覽幾次"
 #: conf/badges.py:131
 msgid "Self-Learner: minimum answer upvotes"
-msgstr "自學者: 回答自己的問題最少要獲得幾次『負評』"
+msgstr "自學者: 回答自己的問題最少要獲得幾次『正評』"
 #: conf/badges.py:140
 msgid "Civic Duty: minimum votes"
 msgstr "社會責任: 最少要給出的評分次數"
 
 #: conf/badges.py:149
 msgid "Enlightened Duty: minimum upvotes"
-msgstr "具啟發性定義: 最少要獲得『負評』的次數"
+msgstr "具啟發性定義: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:158
 msgid "Guru: minimum upvotes"
-msgstr "大師: 最少要獲得『負評』的次數"
+msgstr "大師: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:167
 msgid "Necromancer: minimum upvotes"
-msgstr "法師: 最少要獲得『負評』的次數"
+msgstr "法師: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:176
 msgid "Necromancer: minimum delay in days"
@@ -1911,7 +1911,7 @@ msgstr "正評(+1)"
 
 #: conf/minimum_reputation.py:31
 msgid "Downvote"
-msgstr "噓(-1)"
+msgstr "負評(-1)"
 
 #: conf/minimum_reputation.py:40
 msgid "Answer own question immediately"
@@ -1994,7 +1994,7 @@ msgstr "每個使用者每天可以獲得的最多積分"
 
 #: conf/reputation_changes.py:32
 msgid "Gain for receiving an upvote"
-msgstr "取得到一個『負評』, 獲得"
+msgstr "取得到一個『正評』, 獲得"
 
 #: conf/reputation_changes.py:41
 msgid "Gain for the author of accepted answer"
@@ -2005,10 +2005,10 @@ msgstr "最佳答案標記, 獲得"
 
 #: conf/reputation_changes.py:59
 msgid "Gain for post owner on canceled downvote"
-msgstr "問題提出者取消對於您的內容的『噓』評價, 獲得"
+msgstr "問題提出者取消對於您的內容的『負評』評價, 獲得"
 #: conf/reputation_changes.py:68
 msgid "Gain for voter on canceling downvote"
-msgstr "取消對於您的內容的『噓』評價, 獲得"
+msgstr "取消對於您的內容的『負評』評價, 獲得"
 
 #: conf/reputation_changes.py:78
 msgid "Loss for voter for canceling of answer acceptance"
@@ -2018,7 +2018,7 @@ msgid "Loss for author whose answer was \"un-accepted\""
 msgstr "發表者對於您的回答『不接受』, 喪失"
 #: conf/reputation_changes.py:98
 msgid "Loss for giving a downvote"
-msgstr "收到一個『噓』, 喪失"
+msgstr "收到一個『負評』, 喪失"
 
 #: conf/reputation_changes.py:108
 msgid "Loss for owner of post that was flagged offensive"
@@ -2026,7 +2026,7 @@ msgstr "收到不洽當內容的標記, 喪失"
 
 #: conf/reputation_changes.py:118
 msgid "Loss for owner of post that was downvoted"
-msgstr "收到一個問題提出者的『噓』評價, 喪失"
+msgstr "收到一個問題提出者的『負評』評價, 喪失"
 #: conf/reputation_changes.py:128
 msgid "Loss for owner of post that was flagged 3 times per same revision"
 msgstr "問題提出者標註 3次相同的修正, 喪失"
@@ -2037,7 +2037,7 @@ msgstr "問題提出者標註 5次相同的修正, 喪失"
 
 #: conf/reputation_changes.py:148
 msgid "Loss for post owner when upvote is canceled"
-msgstr "問題提出者取消對於您的內容的『負評』評價, 喪失"
+msgstr "問題提出者取消對於您的內容的『正評』評價, 喪失"
 
 #: conf/sidebar_main.py:12
 msgid "Main page sidebar"
@@ -3695,7 +3695,7 @@ msgstr "請登入 立刻使用%s ! "
 
 #: models/badges.py:129
 msgid "Deleted own post with %(votes)s or more upvotes"
-msgstr "刪除評分大於 %(votes)s 次『負評』的張貼"
+msgstr "刪除評分大於 %(votes)s 次『正評』的張貼"
 
 #: models/badges.py:133
 msgid "Disciplined"
@@ -3703,7 +3703,7 @@ msgstr "自我規範"
 
 #: models/badges.py:151
 msgid "Deleted own post with %(votes)s or more downvotes"
-msgstr "刪除評分少於 %(votes)s 次『噓』的張貼"
+msgstr "刪除評分少於 %(votes)s 次『負評』的張貼"
 
 #: models/badges.py:155
 msgid "Peer Pressure"
@@ -3712,7 +3712,7 @@ msgstr "同儕壓力"
 #: models/badges.py:174
 #, python-format
 msgid "Received at least %(votes)s upvote for an answer for the first time"
-msgstr "第一次回答獲得至少 %(votes)s 次『負評』"
+msgstr "第一次回答獲得至少 %(votes)s 次『正評』"
 
 #: models/badges.py:178
 msgid "Teacher"
@@ -3724,7 +3724,7 @@ msgstr "贊成者"
 
 #: models/badges.py:219
 msgid "First upvote"
-msgstr "第一個說『負評』"
+msgstr "第一個給出正面評分(讚)"
 
 #: models/badges.py:227
 msgid "Critic"
@@ -3744,7 +3744,7 @@ msgstr " 給出超過 %(num)s 評分 "
 
 #: models/badges.py:252
 msgid "Answered own question with at least %(num)s up votes"
-msgstr "回答至少有%(num)s個負評的問題"
+msgstr "回答至少有%(num)s個正評的問題"
 #: models/badges.py:256
 msgid "Self-Learner"
 msgstr "自學者"
@@ -3755,7 +3755,7 @@ msgstr "妙答"
 
 #: models/badges.py:309 models/badges.py:321 models/badges.py:333
 msgid "Answer voted up %(num)s times"
-msgstr "回答獲得超過%(num)s 次『負評』"
+msgstr "回答獲得超過%(num)s 次『正評』"
 
 #: models/badges.py:316
 msgid "Good Answer"
@@ -3770,7 +3770,7 @@ msgstr "妙問"
 
 #: models/badges.py:345 models/badges.py:357 models/badges.py:369
 msgid "Question voted up %(num)s times"
-msgstr "問題獲得超過%(num)s 次『負評』"
+msgstr "問題獲得超過%(num)s 次『正評』"
 
 #: models/badges.py:352
 msgid "Good Question"
@@ -4956,32 +4956,43 @@ msgstr ""
 "積分機制允許使用者透過各種操作來取得系統某些權限"
 
 #: skins/default/templates/faq_static.html:20
-msgid "How does reputation system work?"
+msgid "How does karma system work?"
 msgstr "積分機制如何運作?"
 
 #: skins/default/templates/faq_static.html:21
-msgid "Rep system summary"
+msgid "When a question or answer is upvoted, the user who posted them"
+" will gain some points, which are called \"karma points\". "
+"These points serve as a rough measure of the community trust to him/her."
+" Various moderation tasks are gradually assigned to the users based on those points."
 msgstr ""
-"當某個問題或回答收到『負評』的評價, 使用者會增加積分 "
+"當某個問題或回答收到『正評』的評價, 使用者會增加積分 "
 "我們透過這些積分機制來衡量「知識+」對使用者的信任及評價 "
 "您在「知識+」中的各種操作將會影響您的積分 "
 
 #: skins/default/templates/faq_static.html:22
 #, python-format
 msgid ""
-"例如, 您問了一個很好的問題或者有一個好回答, 您將會收到『負評』的評價 "
-"反過來說, 您的回答是誤導他人, 您將會收到『噓』的評價 "
-"每個『負評』會收到 <strong>"
+"For example, if you ask an interesting question or give a helpful answer, your input "
+"will be upvoted. On the other hand if the answer is misleading - it will be downvoted. "
+"Each vote in favor will generate <strong>{{REP_GAIN_FOR_RECEIVING_UPVOTE}}</strong> points, "
+"each vote against will subtract <strong>{{REP_LOSS_FOR_RECEIVING_DOWNVOTE}}</strong> points. "
+"There is a limit of <strong>{{MAX_REP_GAIN_PER_USER_PER_DAY}}</strong> points that can be "
+"accumulated for a question or answer per day. The table below explains reputation point "
+"requirements for each type of moderation task."
+msgstr ""
+"例如, 您問了一個很好的問題或者有一個好回答, 您將會收到『正評』的評價 "
+"反過來說, 您的回答是誤導他人, 您將會收到『負評』的評價 "
+"每個『正評』會收到 <strong>"
 "%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong> 積分, 每個『負評』會扣除"
 "<strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong> 積分. 每天您"
 "最多可以得到 <strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong> 積分 "
 "以下表格說明每個操作所帶來的積分影響."
-msgstr ""
+
 
 #: skins/default/templates/faq_static.html:32
 #: skins/default/templates/user_profile/user_votes.html:13
 msgid "upvote"
-msgstr "『負評』"
+msgstr "『正評』"
 
 #: skins/default/templates/faq_static.html:37
 msgid "use tags"
@@ -4994,7 +5005,7 @@ msgstr "給問題"
 #: skins/default/templates/faq_static.html:46
 #: skins/default/templates/user_profile/user_votes.html:15
 msgid "downvote"
-msgstr "『噓』"
+msgstr "『負評』"
 
 #: skins/default/templates/faq_static.html:49
 msgid " accept own answer to own questions"
@@ -5403,20 +5414,20 @@ msgstr "關注 %(alias)s"
 
 #: skins/default/templates/macros.html:29
 msgid "i like this question (click again to cancel)"
-msgstr "我要對這個問題說『負評』(再點擊一次取消)"
+msgstr "我要對這個問題說『正評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:31
 msgid "i like this answer (click again to cancel)"
-msgstr "我要對這個問題說『負評』(再點擊一次取消)"
+msgstr "我要對這個回答說『正評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:37
 msgid "current number of votes"
 msgstr "目前評分次數"
 
 #: skins/default/templates/macros.html:43
 msgid "i dont like this question (click again to cancel)"
-msgstr "我要對這個問題說『噓』(再點擊一次取消)"
+msgstr "我要對這個問題說『負評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:45
 msgid "i dont like this answer (click again to cancel)"
-msgstr "我要對這個問題說『噓』(再點擊一次取消)"
+msgstr "我要對這個問題說『負評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:52
 msgid "anonymous user"
 msgstr "匿名使用者"
@@ -6558,19 +6569,19 @@ msgstr[1]  "<span class=\"count\">%(cnt)s</span> 評分..."
 
 #: skins/default/templates/user_profile/user_stats.html:50
 msgid "thumb up"
-msgstr "豎大拇指 『負評』"
+msgstr "豎大拇指 『正評』"
 
 #: skins/default/templates/user_profile/user_stats.html:51
 msgid "user has voted up this many times"
-msgstr "使用者已經說『負評』 許多次"
+msgstr "使用者已經說『正評』 許多次"
 
 #: skins/default/templates/user_profile/user_stats.html:54
 msgid "thumb down"
-msgstr "倒大拇指 『噓』"
+msgstr "倒大拇指 『負評』"
 
 #: skins/default/templates/user_profile/user_stats.html:55
 msgid "user voted down this many times"
-msgstr "使用者已經說『噓』 許多次"
+msgstr "使用者已經說『負評』 許多次"
 
 #: skins/default/templates/user_profile/user_stats.html:63
 #, python-format
