@@ -829,7 +829,7 @@ var Vote = function(){
             );
         }
         else if(data.status == "1"){
-            var follow_html = gettext('Follow');
+            var follow_html = gettext('關注');
             object.attr("class", 'button follow');
             object.html(follow_html);
             var fav = getFavoriteNumber();
@@ -838,16 +838,16 @@ var Vote = function(){
                 data.count = '';
                 fav.text('');
             }else{
-                var fmts = ngettext('%s follower', '%s followers', data.count);
+                var fmts = ngettext('%s 關注者', '%s 關注者', data.count);
                 fav.text(interpolate(fmts, [data.count]));
             }
         }
         else if(data.success == "1"){
-            var followed_html = gettext('<div>Following</div><div class="unfollow">Unfollow</div>');
+            var followed_html = gettext('<div>關注</div><div class="unfollow">取消關注</div>');
             object.html(followed_html);
             object.attr("class", 'button followed');
             var fav = getFavoriteNumber();
-            var fmts = ngettext('%s follower', '%s followers', data.count);
+            var fmts = ngettext('%s 關注者', '%s 關注者', data.count);
             fav.text(interpolate(fmts, [data.count]));
             fav.addClass("my-favorite-number");
         }
@@ -4071,13 +4071,13 @@ $(document).ready(function() {
     var showSharedUsers = $('.see-related-users');
     if (showSharedUsers.length) {
         var usersPopup = new ThreadUsersDialog();
-        usersPopup.setHeadingText(gettext('Shared with the following users:'));
+        usersPopup.setHeadingText(gettext('跟關注這個議題的網友分享:'));
         usersPopup.decorate(showSharedUsers);
     }
     var showSharedGroups = $('.see-related-groups');
     if (showSharedGroups.length) {
         var groupsPopup = new ThreadUsersDialog();
-        groupsPopup.setHeadingText(gettext('Shared with the following groups:'));
+        groupsPopup.setHeadingText(gettext('跟關注這個議題的網友分享:'));
         groupsPopup.decorate(showSharedGroups);
     }
 });
