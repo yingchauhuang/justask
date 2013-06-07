@@ -2238,6 +2238,10 @@ msgid "Keepwin"
 msgstr "靈龜穩賺網"
 
 #: conf/site_settings.py:12
+msgid "Taiwan, Province of China"
+msgstr "Taiwan"
+
+#: conf/site_settings.py:12
 msgid "Keepwin,Stock,Investment,Taiwan Stock,CNPROG,forum,community"
 msgstr "靈龜穩賺網,股票,投資,台股,「知識+」"
 
