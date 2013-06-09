@@ -33,12 +33,14 @@ import logging
 from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
-from django.conf import settings
+from django.utils.translation import ugettext_lazy
+from django.conf import settings as django_settings
 from askbot.conf import settings as askbot_settings
 from askbot import const as askbot_const
 from django.utils.safestring import mark_safe
 from recaptcha_works.fields import RecaptchaField
 from askbot.utils.forms import NextUrlField, UserNameField, UserEmailField, SetPasswordForm
+from askbot.utils.loading import load_module
 
 # needed for some linux distributions like debian
 try:
@@ -105,7 +107,7 @@ class OpenidSigninForm(forms.Form):
         if 'openid_url' in self.cleaned_data:
             openid_url = self.cleaned_data['openid_url']
             if xri.identifierScheme(openid_url) == 'XRI' and getattr(
-                settings, 'OPENID_DISALLOW_INAMES', False
+                    django_settings, 'OPENID_DISALLOW_INAMES', False
                 ):
                 raise forms.ValidationError(_('i-names are not supported'))
             return self.cleaned_data['openid_url']
@@ -211,7 +213,8 @@ class LoginForm(forms.Form):
             self.cleaned_data['login_type'] = 'openid'
         elif provider_type == 'oauth':
             self.cleaned_data['login_type'] = 'oauth'
-            pass
+        elif provider_type == 'oauth2':
+            self.cleaned_data['login_type'] = 'oauth2'
         elif provider_type == 'facebook':
             self.cleaned_data['login_type'] = 'facebook'
             #self.do_clean_oauth_fields()
@@ -332,7 +335,7 @@ class SafeClassicRegisterForm(ClassicRegisterForm):
 class ChangePasswordForm(SetPasswordForm):
     """ change password form """
     oldpw = forms.CharField(widget=forms.PasswordInput(attrs={'class':'required'}),
-                label=mark_safe(_('Current password')))
+                label=mark_safe(ugettext_lazy('Current password')))
 
     def __init__(self, data=None, user=None, *args, **kwargs):
         if user is None:
@@ -360,21 +363,18 @@ class ChangeEmailForm(forms.Form):
     def clean_email(self):
         """ check if email don't exist """
         if 'email' in self.cleaned_data:
-            if askbot_settings.EMAIL_UNIQUE == True:
-                try:
-                    user = User.objects.get(email = self.cleaned_data['email'])
-                    if self.user and self.user == user:   
-                        return self.cleaned_data['email']
-                except User.DoesNotExist:
+            try:
+                user = User.objects.get(email = self.cleaned_data['email'])
+                if self.user and self.user == user:   
                     return self.cleaned_data['email']
-                except User.MultipleObjectsReturned:
-                    raise forms.ValidationError(u'There is already more than one \
-                        account registered with that e-mail address. Please try \
-                        another.')
-                raise forms.ValidationError(u'This email is already registered \
-                    in our database. Please choose another.')
-            else:
+            except User.DoesNotExist:
                 return self.cleaned_data['email']
+            except User.MultipleObjectsReturned:
+                raise forms.ValidationError(u'There is already more than one \
+                    account registered with that e-mail address. Please try \
+                    another.')
+            raise forms.ValidationError(u'This email is already registered \
+                in our database. Please choose another.')
 
 class AccountRecoveryForm(forms.Form):
     """with this form user enters email address and
@@ -392,9 +392,9 @@ class AccountRecoveryForm(forms.Form):
         if 'email' in self.cleaned_data:
             email = self.cleaned_data['email']
             try:
-                user = User.objects.get(email__iexact=email)
+                user = User.objects.filter(email__iexact=email)[0]
                 self.cleaned_data['user'] = user
-            except User.DoesNotExist:
+            except IndexError:
                 del self.cleaned_data['email']
                 message = _('Sorry, we don\'t have this email address in the database')
                 raise forms.ValidationError(message)
@@ -432,7 +432,12 @@ class DeleteForm(forms.Form):
 
 class EmailPasswordForm(forms.Form):
     """ send new password form """
-    username = UserNameField(skip_clean=True,label=mark_safe(_('Your user name (<i>required</i>)')))
+    username = UserNameField(
+                    skip_clean=True,
+                    label=mark_safe(
+                            ugettext_lazy('Your user name (<i>required</i>)')
+                        )
+                )
 
     def __init__(self, data=None, files=None, auto_id='id_%s', prefix=None, 
             initial=None):
@@ -449,3 +454,13 @@ class EmailPasswordForm(forms.Form):
             except:
                 raise forms.ValidationError(_("sorry, there is no such user name"))
         return self.cleaned_data['username']
+
+def get_registration_form_class():
+    """returns class for the user registration form
+    user has a chance to specify the form via setting `REGISTRATION_FORM`
+    """
+    custom_class = getattr(django_settings, 'REGISTRATION_FORM', None)
+    if custom_class:
+        return load_module(custom_class)
+    else:
+        return OpenidRegisterForm
