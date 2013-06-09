@@ -4987,9 +4987,9 @@ msgstr ""
 "例如, 您問了一個很好的問題或者有一個好回答, 您將會收到『正評』的評價 "
 "反過來說, 您的回答是誤導他人, 您將會收到『負評』的評價 "
 "每個『正評』會收到 <strong>"
-"%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong> 積分, 每個『負評』會扣除"
-"<strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong> 積分. 每天您"
-"最多可以得到 <strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong> 積分 "
+"{{REP_GAIN_FOR_RECEIVING_UPVOTE}}</strong> 積分, 每個『負評』會扣除"
+"<strong>{{REP_LOSS_FOR_RECEIVING_DOWNVOTE}}</strong> 積分. 每天您"
+"最多可以得到 <strong>{{MAX_REP_GAIN_PER_USER_PER_DAY}}</strong> 積分 "
 "以下表格說明每個操作所帶來的積分影響."
 
 
