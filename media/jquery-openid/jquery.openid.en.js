@@ -70,7 +70,7 @@ $.fn.authenticator = function() {
                                 ).find('button');
                 remove_button.click(
                     function(){
-                        var message = interpolate(gettext('您確定要移除透過 %s 的登入方式嗎?'), [provider_name]);
+                        var message = interpolate(gettext('Are you sure you want to remove your %s login?'), [provider_name]);
                         if (confirm(message)){
                             $.ajax({
                                 type: 'POST',
@@ -87,10 +87,10 @@ $.fn.authenticator = function() {
                                         $('#ab-existing-login-methods').remove();
                                         $('#ab-show-login-methods').remove();
                                         $('h1').html(
-                                            gettext("請增加更多的登入方式.")
+                                            gettext("Please add one or more login methods.")
                                         );
                                         $('#login-intro').html(
-                                            gettext("您目前沒有建立任何的登入方式, 請透過點擊下面的圖示來新增登入方式.")
+                                            gettext("You don\'t have a method to log in right now, please add one or more by clicking any of the icons below.")
                                         );
                                         existing_login_methods = null;
                                     }
@@ -132,7 +132,7 @@ $.fn.authenticator = function() {
         if (newpass.val() !== newpass_retyped.val()){
             newpass_retyped.after(
                     '<span class="error">' +
-                    gettext('密碼不符') + 
+                    gettext('passwords do not match') + 
                     '</span>'
                 );
             newpass.val('').focus();
@@ -159,7 +159,7 @@ $.fn.authenticator = function() {
         else {
             enabler = $(
                     '<p id="login-list-enabler"><a href="#">' +
-                    gettext('點擊這裡 顯示或更改目前您的登入方式') +
+                    gettext('Show/change current login methods') +
                     '</a></p>');
             setup_event_handlers(
                 enabler,
@@ -224,9 +224,9 @@ $.fn.authenticator = function() {
         var token_name = extra_token_name[provider_name]
         if (userIsAuthenticated){
             $('#openid-heading').html(
-                interpolate(gettext('請輸入您的 %s, 然後繼續'), [token_name])
+                interpolate(gettext('Please enter your %s, then proceed'), [token_name])
             );
-            var button_text = gettext('我們將 %(provider_name)s 的帳號連結到 %(site)s');
+            var button_text = gettext('Connect your %(provider_name)s account to %(site)s');
 			var data = {
 				provider_name: provider_name,
 				site: siteName
@@ -320,12 +320,12 @@ $.fn.authenticator = function() {
                 var provider_cleaned_name = provider_name;
             }
             if (existing_login_methods && existing_login_methods[provider_name]){
-                var password_heading_text = interpolate(gettext('更改您的 %s 密碼'), [provider_cleaned_name])
-                var password_button_text = gettext('更改密碼')
+                var password_heading_text = interpolate(gettext('Change your %s password'), [provider_cleaned_name])
+                var password_button_text = gettext('Change password')
             }
             else {
-                var password_heading_text = interpolate(gettext('建立一個在 %s 使用的新密碼'), [provider_cleaned_name])
-                var password_button_text = gettext('建立新密碼')
+                var password_heading_text = interpolate(gettext('Create a password for %s'), [provider_cleaned_name])
+                var password_button_text = gettext('Create password')
             }
             $('#password-heading').html(
                 password_heading_text
@@ -341,7 +341,7 @@ $.fn.authenticator = function() {
             var submit_action = submit_login_with_password;
             var create_pw_link = $('a.create-password-account')
             if (create_pw_link.length > 0){
-                create_pw_link.html(gettext('我要立刻登錄一個帳號...'));
+                create_pw_link.html(gettext('Create a password-protected account'));
                 var url = create_pw_link.attr('href');
                 if (url.indexOf('?') !== -1){
                     url = url.replace(/\?.*$/,'?login_provider=' + provider_name);
@@ -405,7 +405,12 @@ $.fn.authenticator = function() {
         );
 
         setup_event_handlers(
-            signin_page.find('input.oauth,input.oauth2'),
+            signin_page.find('input.facebook'),
+            start_facebook_login
+        );
+
+        setup_event_handlers(
+            signin_page.find('input.oauth'),
             start_simple_login
         );
 
