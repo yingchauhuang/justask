@@ -12,7 +12,7 @@ var setup_inbox = function(){
         });
 
         if (id_list.length === 0){
-            alert(gettext('Please select at least one item'));
+            alert(gettext('請最少選擇一個項目!!!'));
         }
 
         return {id_list: id_list, elements: elements};
@@ -71,8 +71,8 @@ var setup_inbox = function(){
         }
         if (action_type == 'remove_flag'){
             msg = ngettext(
-                    'Remove all flags and approve this entry?',
-                    'Remove all flags and approve these entries?',
+                    '移除所有的標記並同意這個輸入?',
+                    '移除所有的標記並同意這些輸入?',
                     data['id_list'].length
                 );
             if (confirm(msg) === false){
@@ -220,9 +220,9 @@ PostModerationControls.prototype.moderatePost = function(reasonId, actionType){
                 me.removeMemo();
                 me.dispose();
                 if (actionType === 'delete') {
-                    notify.show(gettext('Post deleted'));
+                    notify.show(gettext('文章已刪除'));
                 } else if (actionType === 'remove_flag') {
-                    notify.show(gettext('Post approved'));
+                    notify.show(gettext('文章已核可'));
                 }
             } else {
                 notify.show(data['message']);
@@ -243,7 +243,7 @@ PostModerationControls.prototype.createDom = function() {
 
     var acceptBtn = this.makeElement('a');
     acceptBtn.addClass('btn save-reason');
-    acceptBtn.html(gettext('Accept'));
+    acceptBtn.html(gettext('接受'));
     div.append(acceptBtn);
 
     div = this.makeElement('div');
@@ -267,7 +267,7 @@ PostModerationControls.prototype.createDom = function() {
     //reason adder
     var li = this.makeElement('li');
     var anchor = this.makeElement('a');
-    anchor.html(gettext('add new reject reason'));
+    anchor.html(gettext('新增一個拒絕的理由'));
     li.append(anchor);
     ul.append(li);
 
@@ -372,7 +372,7 @@ RejectPostDialog.prototype.makeAlertBox = function(errors){
         if (errors.length > 1){
             alert_box.setContent(
                 '<div>' + 
-                gettext('Looks there are some things to fix:') +
+                gettext('看起來有些地方要修正:') +
                 '</div>'
             )
             var list = this.makeElement('ul');
@@ -440,10 +440,10 @@ RejectPostDialog.prototype.startSavingReason = function(callback){
 
     var errors = [];
     if (title_input.isBlank()){
-        errors.push(gettext('Please provide description.'));
+        errors.push(gettext('請提供問題描述.'));
     }
     if (details_input.isBlank()){
-        errors.push(gettext('Please provide details.'));
+        errors.push(gettext('請說明細節.'));
     }
 
     if (errors.length > 0){
@@ -557,7 +557,7 @@ RejectPostDialog.prototype.startDeletingReason = function(){
         });
     } else {
         me.setSelectorErrors(
-            gettext('A reason must be selected to delete one.')
+            gettext('先要選擇理由才能刪除.')
         )
     }
 };
@@ -656,7 +656,7 @@ RejectPostDialog.prototype.decorate = function(element){
                 me.setPreviewerData(data);
             } else {
                 me.setSelectorErrors(
-                    gettext('A reason must be selected to reject post.')
+                    gettext('先要選擇理由才能拒絕貼文.')
                 )
             }
         }
@@ -705,7 +705,7 @@ FollowUser.prototype.decorate = function(element){
 
 FollowUser.prototype.go = function(){
     if (askbot['data']['userIsAuthenticated'] === false){
-        var message = gettext('Please <a href="%(signin_url)s">signin</a> to follow %(username)s');
+        var message = gettext('請 <a href="%(signin_url)s">登入</a> 以便關注 %(username)s');
         var message_data = {
             signin_url: askbot['urls']['user_signin'] + '?next=' + window.location.href,
             username: this._user_name
@@ -737,16 +737,16 @@ FollowUser.prototype.toggleState = function(){
         unfollow_div.setAttribute('class', 'unfollow');
         var red_div = document.createElement('div');
         red_div.setAttribute('class', 'unfollow-red');
-        red_div.innerHTML = interpolate(gettext('unfollow %s'), [this._user_name]);
+        red_div.innerHTML = interpolate(gettext('取消關注 %s'), [this._user_name]);
         var green_div = document.createElement('div');
         green_div.setAttribute('class', 'unfollow-green');
-        green_div.innerHTML = interpolate(gettext('following %s'), [this._user_name]);
+        green_div.innerHTML = interpolate(gettext('已關注 %s'), [this._user_name]);
         unfollow_div.appendChild(red_div);
         unfollow_div.appendChild(green_div);
         this._element.html(unfollow_div);
     } else {
         var follow_div = document.createElement('div'); 
-        follow_div.innerHTML = interpolate(gettext('follow %s'), [this._user_name]);
+        follow_div.innerHTML = interpolate(gettext('關注 %s'), [this._user_name]);
         follow_div.setAttribute('class', 'follow');
         this._available_action = 'follow';
         this._element.html(follow_div);
@@ -880,12 +880,12 @@ inherits(GroupAdderWidget, WrappedElement);
  */
 GroupAdderWidget.prototype.setState = function(state){
     if (state === 'display'){
-        this._element.html(gettext('add group'));
+        this._element.html(gettext('新增群組'));
         this._input.hide();
         this._input.val('');
         this._button.hide();
     } else if (state === 'edit'){
-        this._element.html(gettext('cancel'));
+        this._element.html(gettext('取消'));
         this._input.show();
         this._input.focus();
         this._button.show();
@@ -960,7 +960,7 @@ GroupAdderWidget.prototype.decorate = function(element){
     groupsAc.decorate(input);
 
     var button = this.makeElement('button');
-    button.html(gettext('add'));
+    button.html(gettext('新增'));
     this._button = button;
     element.before(input);
     input.after(button);

@@ -489,6 +489,10 @@ msgstr "內容至少要10個字符"
 msgid "tags"
 msgstr "標籤"
 
+#: skins/default/templates/widgets/meta_nav.html:5
+msgid "tags"
+msgstr "標籤"
+
 #: forms.py:137
 msgid ""
 "Tags are short keywords, with no spaces within. Up to %(max_tags)d tag can "
@@ -4536,11 +4540,42 @@ msgstr "刪除這些"
 
 #: skins/common/templates/question/answer_controls.html:5
 msgid "answer permanent link"
-msgstr "permanent link"
+msgstr "另外的答案連結"
 
 #: skins/common/templates/question/answer_controls.html:6
 msgid "permanent link"
-msgstr "link"
+msgstr "答案連結"
+
+#: skins/common/templates/question/answer_controls.html:13
+#: skins/common/templates/question/question_controls.html:4
+msgid "undelete"
+msgstr "取消刪除"
+
+#: skins/common/templates/question/answer_controls.html:19
+#, fuzzy
+msgid "remove offensive flag"
+msgstr "移開不洽當標記"
+
+#: skins/common/templates/question/answer_controls.html:21
+#: skins/common/templates/question/question_controls.html:16
+msgid "remove flag"
+msgstr "移開標記"
+
+#: skins/common/templates/question/answer_controls.html:26
+#: skins/common/templates/question/answer_controls.html:35
+#: skins/common/templates/question/question_controls.html:14
+#: skins/common/templates/question/question_controls.html:20
+#: skins/common/templates/question/question_controls.html:27
+msgid ""
+"report as offensive (i.e containing spam, advertising, malicious text, etc.)"
+msgstr "回報為不洽當(如: 垃圾信, 廣告, 謾罵文, 等等.)"
+
+#: skins/common/templates/question/answer_controls.html:28
+#: skins/common/templates/question/answer_controls.html:37
+#: skins/common/templates/question/question_controls.html:22
+#: skins/common/templates/question/question_controls.html:29
+msgid "flag offensive"
+msgstr "標記為不洽當"
 
 #: skins/common/templates/question/answer_controls.html:10
 #: skins/common/templates/question/question_controls.html:3
@@ -6252,6 +6287,10 @@ msgstr "真實姓名"
 
 #: skins/default/templates/user_profile/user_info.html:58
 msgid "member for"
+msgstr "會員起始"
+
+#: skins/default/templates/user_profile/user_info.html:58
+msgid "member since"
 msgstr "會員起始"
 
 #: skins/default/templates/user_profile/user_info.html:58
