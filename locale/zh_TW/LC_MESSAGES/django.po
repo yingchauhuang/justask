@@ -490,7 +490,7 @@ msgid "tags"
 msgstr "標籤"
 
 #: skins/default/templates/widgets/meta_nav.html:5
-msgid "tags"
+msgid "Tags"
 msgstr "標籤"
 
 #: forms.py:137
@@ -4588,29 +4588,6 @@ msgstr "標記為不洽當"
 msgid "edit"
 msgstr "編輯"
 
-#: skins/common/templates/question/answer_controls.html:14
-#: skins/common/templates/question/answer_controls.html:23
-#: skins/common/templates/question/question_controls.html:22
-#: skins/common/templates/question/question_controls.html:31
-msgid ""
-"report as offensive (i.e containing spam, advertising, malicious text, etc.)"
-msgstr "回報不洽當內容(如: 垃圾文, 廣告, 惡意文字等等)"
-
-#: skins/common/templates/question/answer_controls.html:15
-#: skins/common/templates/question/question_controls.html:23
-msgid "flag offensive"
-msgstr "標示為不洽當內容"
-
-#: skins/common/templates/question/answer_controls.html:24
-#: skins/common/templates/question/question_controls.html:32
-msgid "remove flag"
-msgstr ""
-
-#: skins/common/templates/question/answer_controls.html:34
-#: skins/common/templates/question/question_controls.html:39
-msgid "undelete"
-msgstr ""
-
 #: skins/common/templates/question/answer_controls.html:40
 msgid "swap with question"
 msgstr ""
@@ -6241,10 +6218,6 @@ msgstr "關注問題"
 #: skins/default/templates/user_profile/user_tabs.html:12
 msgid "inbox"
 msgstr "信箱"
-
-#: skins/default/templates/user_profile/user_inbox.html:34
-msgid "Sections:"
-msgstr ""
 
 #: skins/default/templates/user_profile/user_inbox.html:38
 #, python-format
