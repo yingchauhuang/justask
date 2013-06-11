@@ -97,6 +97,10 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.box .a {
+  height:50px;
+  weight:50px;
+}
 h2 {
   font-size: 21px;
   padding: 3px 0 3px 5px;
@@ -263,7 +267,7 @@ body.user-messages {
   font-size: 13px;
 }
 #userToolsNav a:first-child {
-  margin-left: 0px;
+  margin-left: 5px;
 }
 #userToolsNav a#ab-responses {
   margin-left: 3px;
@@ -401,7 +405,7 @@ body.user-messages {
   background: -51px -36px url(../images/sprites.png) no-repeat;
 }
 #secondaryHeader #scopeWrapper {
-  width: 752px;
+  width: 742px;
   float: left;
 }
 #secondaryHeader #scopeWrapper a {
@@ -547,7 +551,7 @@ body.anon #searchBar .searchInputCancelable {
   text-shadow: 0px 1px 0px #947117;
   -moz-text-shadow: 0px 1px 0px #947117;
   -webkit-text-shadow: 0px 1px 0px #947117;
-  width: 200px;
+  width: 210px;
   /* to match width of sidebar */
 
 }
@@ -566,13 +570,13 @@ body.anon #searchBar .searchInputCancelable {
 }
 /* ----- Content layout, check two_column_body.html or one_column_body.html ----- */
 #ContentLeft {
-  width: 794px;
+  width: 784px;
   float: left;
   position: relative;
   padding-bottom: 10px;
 }
 #ContentRight {
-  width: 200px;
+  width: 210px;
   float: right;
   padding: 0 0px 10px 0px;
 }
@@ -588,7 +592,7 @@ body.anon #searchBar .searchInputCancelable {
 .box {
   background: #fff;
   padding: 4px 0px 10px 0px;
-  width: 200px;
+  width: 210px;
   /* widgets for question template */
 
   /* notify by email box */
@@ -616,7 +620,7 @@ body.anon #searchBar .searchInputCancelable {
   padding-right: 10px;
   margin-bottom: 10px;
   font-family: 'Open Sans Condensed', Arial, sans-serif;
-  width: 190px;
+  width: 200px;
 }
 .box h3 {
   color: #0947ad;
@@ -695,9 +699,6 @@ body.anon #searchBar .searchInputCancelable {
   cursor: pointer;
   color: #fbfbb4;
   font-family: 'Open Sans Condensed', Arial, sans-serif;
-  text-shadow: 0px 1px 0px #947117;
-  -moz-text-shadow: 0px 1px 0px #947117;
-  -webkit-text-shadow: 0px 1px 0px #947117;
   border-top: #eaf2f3 1px solid;
   background-color: #a77f28;
   background-repeat: no-repeat;
@@ -707,7 +708,6 @@ body.anon #searchBar .searchInputCancelable {
   background-image: -ms-linear-gradient(#a77f28, #a77f28 25%, #ddb146);
   background-image: -o-linear-gradient(#a77f28, #a77f28 25%, #ddb146);
   background-image: linear-gradient(#a77f28, #a77f28 25%, #ddb146);
-  text-decoration: none;
   text-shadow: 0px 1px 0px #947117;
   -moz-text-shadow: 0px 1px 0px #947117;
   -webkit-text-shadow: 0px 1px 0px #947117;
@@ -1007,7 +1007,7 @@ ul#searchTags {
   border-bottom: 1px solid #DDDBCE;
   margin-bottom: 1px;
   overflow: hidden;
-  width: 797px;
+  width: 787px;
   float: left;
   /*background: url(../images/summary-background.png) repeat-x;*/
 

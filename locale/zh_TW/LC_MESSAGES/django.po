@@ -6644,7 +6644,6 @@ msgid "followers and followed users"
 msgstr "我所關注的及關注我的"
 
 #: skins/default/templates/user_profile/user_tabs.html:21
-#, fuzzy
 msgid "Graph of user karma"
 msgstr "使用者積分圖"
 
