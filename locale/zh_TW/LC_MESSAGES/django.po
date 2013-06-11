@@ -2938,6 +2938,10 @@ msgstr "編輯回答"
 msgid "received award"
 msgstr "獲獎"
 
+#: const/__init__.py:128
+msgid "received badge"
+msgstr "獲得徽章"
+
 #: const/__init__.py:129
 msgid "marked best answer"
 msgstr "標記最佳答案"
@@ -4878,6 +4882,17 @@ msgstr ""
 msgid "Community badges"
 msgstr "「知識+」徽章"
 
+#: skins/default/templates/badges.html:41
+#, fuzzy
+msgid ""
+"Gold badge is the highest award in this community. To obtain it have to "
+"show \n"
+"profound knowledge and ability in addition to your active participation."
+msgstr ""
+"金牌徽章: 非常罕見的最高榮譽。除了要有專業的知識及解決問題的能力 "
+"更要活躍的參與各項活動.而且需要有高深的"
+"專業和能力才能獲得。"
+
 #: skins/default/templates/badges.html:37
 msgid "gold badge: the highest honor and is very rare"
 msgstr "金牌徽章: 非常罕見的最高榮譽"
@@ -6656,6 +6671,11 @@ msgid "followers and followed users"
 msgstr "我所關注的及關注我的"
 
 #: skins/default/templates/user_profile/user_tabs.html:21
+#, fuzzy
+msgid "Graph of user karma"
+msgstr "使用者積分圖"
+
+#: skins/default/templates/user_profile/user_tabs.html:21
 msgid "graph of user reputation"
 msgstr "使用者積分圖"
 
@@ -7721,3 +7741,11 @@ msgstr "使用者資料"
 #: models/user.py:302
 msgid "PostRevision"
 msgstr "發文修正紀錄"
+
+#: user_inbox/responses_and_flags.py: 4
+msgid "inbox - responses"
+msgstr "信箱 - 我的回應"
+
+#: user_inbox/base.py: 4
+msgid "Sections:"
+msgstr "項目分類:"
