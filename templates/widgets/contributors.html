@@ -3,7 +3,9 @@
   <h2 class="contributorback">{% trans %}Contributors{% endtrans %}</h2>
   {% spaceless %}
   {% for person in contributors %}
+    <span class="pic">
     {{ macros.gravatar(person,48) }}
+	</span>
   {% endfor %}
   {% endspaceless %}
   </div>

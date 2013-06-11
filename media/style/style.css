@@ -97,10 +97,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-.box .a {
-  height:50px;
-  weight:50px;
-}
+
 h2 {
   font-size: 21px;
   padding: 3px 0 3px 5px;
@@ -245,6 +242,10 @@ body.user-messages {
   width: 1024px;
   margin: auto;
   position: relative;
+}
+.footer-wrapper {
+  /* wrapper footer */
+  width: 1024px;
 }
 #logo img {
   padding: 5px 0px 5px 0px;
@@ -4200,4 +4201,9 @@ textarea.tipped-input {
   height: 90px;
   width: 728px;
   float: left;
+}
+
+#contrib-users .pic{
+height:50px;
+width:50px;
 }
