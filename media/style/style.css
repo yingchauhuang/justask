@@ -238,7 +238,7 @@ body.user-messages {
 .content-wrapper {
   /* wrapper positioning class */
 
-  width: 960px;
+  width: 1024px;
   margin: auto;
   position: relative;
 }
@@ -401,7 +401,7 @@ body.user-messages {
   background: -51px -36px url(../images/sprites.png) no-repeat;
 }
 #secondaryHeader #scopeWrapper {
-  width: 688px;
+  width: 752px;
   float: left;
 }
 #secondaryHeader #scopeWrapper a {
@@ -566,7 +566,7 @@ body.anon #searchBar .searchInputCancelable {
 }
 /* ----- Content layout, check two_column_body.html or one_column_body.html ----- */
 #ContentLeft {
-  width: 730px;
+  width: 794px;
   float: left;
   position: relative;
   padding-bottom: 10px;
@@ -1007,7 +1007,7 @@ ul#searchTags {
   border-bottom: 1px solid #DDDBCE;
   margin-bottom: 1px;
   overflow: hidden;
-  width: 733px;
+  width: 797px;
   float: left;
   /*background: url(../images/summary-background.png) repeat-x;*/
 
@@ -1089,7 +1089,7 @@ ul#searchTags {
   color: #b1b5b6;
 }
 .short-summary .some-votes .item-count {
-  color: #fbfbb4;
+  color: #91cdd9;
 }
 .short-summary .no-answers .item-count {
   color: #b1b5b6;
