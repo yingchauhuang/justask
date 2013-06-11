@@ -251,19 +251,19 @@ body.user-messages {
 #userToolsNav {
   /* Navigation bar containing login link or user information, check widgets/user_navigation.html*/
 
-  height: 64px; 
+  height: 44px; 
   padding-bottom: 5px;
 }
 #userToolsNav a {
   height: 35px;
   text-align: right;
-  margin-left: 20px;
+  margin-left: 5px;
   text-decoration: underline;
   color: #0d76b0;
   font-size: 13px;
 }
 #userToolsNav a:first-child {
-  margin-left: 120px;
+  margin-left: 0px;
 }
 #userToolsNav a#ab-responses {
   margin-left: 3px;
@@ -283,17 +283,17 @@ body.user-messages {
 #metaNav {
   /* Top Navigation bar containing links for tags, people and badges, check widgets/header.html */
 
-  float: right;
+  float: left;
   /* for #header.with-logo it is modified */
 
   margin-right: 7px;
 }
 #metaNav a {
   color: #0d76b0;
-  padding: 0px 0px 0px 35px;
+  padding: 0px 0px 0px 40px;
   height: 35px;
   line-height: 25px;
-  margin: 5px 0px 0px 10px;
+  margin: 0px 0px 0px 0px;
   font-size: 15px;
   font-weight: 100;
   text-decoration: none;
@@ -368,16 +368,15 @@ body.user-messages {
   height: 25px;
 }
 #header.with-logo #userToolsNav {
-  position: absolute;
-  bottom: 0;
   float: left;
-  margin-left: 20px;
-  margin-top: 7px;
+  width: 156px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 #header.without-logo #userToolsNav {
   background: 0px 0px url(../images/moneydj.png) no-repeat;
   float: left;
-  margin-top: 7px;
+  margin-top: 0px;
 }
 
 #secondaryHeader {
@@ -4194,4 +4193,11 @@ textarea.tipped-input {
   .short-summary {
     width: 100%;
   }
+}
+
+.catbar-ad{
+  padding: 0px 0px 0px 0px;
+  height: 90px;
+  width: 728px;
+  float: left;
 }
