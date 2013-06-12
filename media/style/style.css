@@ -746,9 +746,11 @@ background-color: #ddb146;
 }
 img.moneydj {
   margin: 1px;
-  position: absolute;
+  position: relative;
   z-index: 30;
+  display: inline;
 }
+
 .box a.followed,
 .box a.follow {
   line-height: 34px;
@@ -4201,14 +4203,4 @@ textarea.tipped-input {
   height: 90px;
   width: 728px;
   float: left;
-}
-
-#contrib-users .sub-gravatar{
-min-height:50px;
-min-width:50px;
-}
-
-#contrib-users .pic{
-min-height:50px;
-min-width:50px;
 }

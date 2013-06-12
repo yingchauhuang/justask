@@ -639,11 +639,8 @@ answer {% if answer.accepted() %}accepted-answer{% endif %} {% if answer.author_
     title="{{user.username|escape}}" 
     alt="{% trans username=user.username|escape %}{{username}} gravatar image{% endtrans %}" 
 />{% if user.is_staff %}<img class="moneydj" 
-    width="{{size}}" height="{{size}}"
+    style="margin-left:-{{size}}px" width="{{size}}" height="{{size}}"
     src='{{"../media/images/SysJust.png"|media}}'
-/>{% else %}<img class="moneydj" 
-    width="{{size}}" height="{{size}}"
-    src='{{"../media/images/blank.png"|media}}'
 />{% endif %}</a>
 {% endspaceless %}
 {%- endmacro -%}
