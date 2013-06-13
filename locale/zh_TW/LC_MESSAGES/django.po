@@ -212,6 +212,10 @@ msgstr "移除登入方式"
 msgid "delete"
 msgstr "刪除"
 
+#: templates/question/answer_controls.html:62
+msgid "convert to comment"
+msgstr "轉成評論"
+
 #: skins/common/templates/authopenid/signin.html:168
 msgid "cannot be deleted"
 msgstr "無法刪除"
@@ -824,7 +828,7 @@ msgstr ""
 
 #: forms.py:551
 msgid "Your message:"
-msgstr "Copyright(c)2012. Asali.com.tw"
+msgstr "請輸入您寶貴的意見:"
 
 #: forms.py:556
 msgid "I don't want to give my email or receive a response:"
@@ -4849,8 +4853,8 @@ msgstr "本「知識+」根據您的『問題』、『回答』、『評分』�
 #, python-format
 msgid ""
 "Below is the list of available badges and number \n"
-"of times each type of badge has been awarded. Give us feedback at "
-"%(feedback_faq_url)s.\n"
+"    of times each type of badge has been awarded. Have ideas about fun \n"
+"badges? Please, give us your <a href='%(feedback_faq_url)s'>feedback</a>\n"
 msgstr ""
 "以下列出所有的徽章及其頒發的條件 \n"
 "有頒給新徽章的任何建議嗎? "
@@ -4860,10 +4864,8 @@ msgid "Community badges"
 msgstr "「知識+」徽章"
 
 #: skins/default/templates/badges.html:41
-#, fuzzy
 msgid ""
-"Gold badge is the highest award in this community. To obtain it have to "
-"show \n"
+"Gold badge is the highest award in this community. To obtain it you have to show \n"
 "profound knowledge and ability in addition to your active participation."
 msgstr ""
 "金牌徽章: 非常罕見的最高榮譽。除了要有專業的知識及解決問題的能力 "
@@ -5127,11 +5129,11 @@ msgstr ""
 
 #: skins/default/templates/feedback.html:3
 msgid "Feedback"
-msgstr ""
+msgstr "批評與建議"
 
 #: skins/default/templates/feedback.html:5
 msgid "Give us your feedback!"
-msgstr ""
+msgstr "請不吝給我們批評與建議!"
 
 #: skins/default/templates/feedback.html:14
 #, python-format
@@ -5142,6 +5144,11 @@ msgid ""
 "        Please type and send us your message below.\n"
 "        "
 msgstr ""
+"\n"
+"        <span class='big strong'>親愛的 %(user_name)s</span>, 我們期待聽到您 "
+"的任何批評與建議. \n"
+"        請輸入您寶貴的意見並按下『送出我的意見』按鈕送出.\n"
+"        "
 
 #: skins/default/templates/feedback.html:21
 msgid ""
@@ -5151,23 +5158,28 @@ msgid ""
 "        Please type and send us your message below.\n"
 "        "
 msgstr ""
+"\n"
+"        <span class='big strong'>親愛的訪客</span>, 我們期待聽到您 "
+"的任何批評與建議.\n"
+"        請輸入您寶貴的意見並按下『送出我的意見』按鈕送出.\n"
+"        "
 
 #: skins/default/templates/feedback.html:30
 msgid "(to hear from us please enter a valid email or check the box below)"
-msgstr ""
+msgstr "(請輸入有效的 email 以便收到我們的回信)"
 
 #: skins/default/templates/feedback.html:37
 #: skins/default/templates/feedback.html:46
 msgid "(this field is required)"
-msgstr ""
+msgstr "(這是必要欄位)"
 
 #: skins/default/templates/feedback.html:55
 msgid "(Please solve the captcha)"
-msgstr ""
+msgstr "(請輸入驗證碼)"
 
 #: skins/default/templates/feedback.html:63
 msgid "Send Feedback"
-msgstr ""
+msgstr "送出我的意見"
 
 
 #: skins/default/templates/feedback_email.txt:2
