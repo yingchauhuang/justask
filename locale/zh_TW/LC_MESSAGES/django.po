@@ -5590,6 +5590,12 @@ msgstr "有 %(new)s 個新標示為不洽當內容"
 msgid "%(seen)s flagged posts"
 msgstr "%(seen)s 個已經看過"
 
+#: skins/default/templates/macros.html:658
+#: skins/default/templates/macros.html:659
+#, python-format
+msgid "Comments"
+msgstr "評論"
+
 #: skins/default/templates/privacy.html:3
 #: skins/default/templates/privacy.html:5
 msgid "Privacy policy"
@@ -5923,17 +5929,10 @@ msgstr ""
 
 #: skins/default/templates/question/answer_tab_bar.html:3
 #, python-format
-msgid ""
-"\n"
-"            {{counter}} Answer"
-"            {% pluralize %}"
-"            {{counter}} Answers"
-
-msgstr ""
-"\n"
-"            {{counter}} 回答"
-"            {% pluralize %}"
-"            {{counter}} 回答"
+msgid "%(counter) Answer"
+msgid_plural "%(counter) Answers"
+msgstr[0] "%(counter)個回答"
+msgstr[1] "%(counter)個回答"
 
 #: skins/default/templates/question/answer_tab_bar.html:14
 msgid "oldest answers will be shown first"
