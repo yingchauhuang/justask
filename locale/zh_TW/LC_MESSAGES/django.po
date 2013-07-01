@@ -7227,7 +7227,7 @@ msgstr "對不起! 有些錯誤發生, 麻煩回報給管理員!"
 
 #: views/commands.py:207
 msgid "Sorry, but anonymous users cannot accept answers"
-msgstr "對不起! 您要登入後才能接受回答!"
+msgstr "對不起! 您要登入後才能標示正確(接受)回答!"
 
 #: views/commands.py:301
 #, python-format
