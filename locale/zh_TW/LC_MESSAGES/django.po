@@ -4399,7 +4399,7 @@ msgid ""
 "Forum Administrator"
 msgstr ""
 "你好, \n"
-" 「知識+」管理者"
+" 「嘉實知識+」管理者"
 
 #: skins/common/templates/authopenid/email_validation.txt:1
 #: skins/old/templates/authopenid/email_validation.txt:1
@@ -4418,8 +4418,8 @@ msgstr "請依上列指引認證電子郵件地址"
 
 #: skins/common/templates/authopenid/email_validation.txt:9
 msgid ""
-"If you believe that this message was sent in mistake - \n"
-"no further action is needed. Just ingore this email, we apologize\n"
+"If you believe that this message was sent in mistake - "
+"no further action is needed. Just ignore this email, we apologize "
 "for any inconvenience"
 msgstr "如你肯定這訊息被誤送, 不需做任何動作, 並忽略此信, 非常抱歉! "
 
@@ -5431,6 +5431,10 @@ msgstr ""
 #: skins/default/templates/instant_notification.html:42
 msgid "<p>Sincerely,<br/>Forum Administrator</p>"
 msgstr "<p>此致,<br/>「知識+」系統管理員</p>"
+
+#: skins/default/templates/mail/footer.html:42
+msgid "Sincerely,<br>%(site_name)s Administrator"
+msgstr "此致,<br/>%(site_name)s 系統管理員"
 
 #: skins/default/templates/macros.html:3
 #, python-format
