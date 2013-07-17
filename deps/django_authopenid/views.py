@@ -31,6 +31,8 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import datetime
+import logging
+import sys
 from django.http import HttpResponseRedirect, get_host, Http404
 from django.http import HttpResponse
 from django.template import RequestContext, Context
@@ -1232,24 +1234,28 @@ def send_email_key(email, key, handler_url_name='user_account_recover'):
     """private function. sends email containing validation key
     to user's email address
     """
-    subject = _("Recover your %(site)s account") % \
-                {'site': askbot_settings.APP_SHORT_NAME}
-
-    url = urlparse(askbot_settings.APP_URL)
-    data = {
-        'validation_link': url.scheme + '://' + url.netloc + \
-                            reverse(handler_url_name) +\
-                            '?validation_code=' + key
-    }
-    template = get_template('authopenid/email_validation.html')
-    message = template.render(data)#todo: inject language preference
-    send_mail(subject, message, django_settings.DEFAULT_FROM_EMAIL, [email])
-
+    try:
+        subject = _("Recover your %(site)s account") % \
+                    {'site': askbot_settings.APP_SHORT_NAME}
+    
+        url = urlparse(askbot_settings.APP_URL)
+        data = {
+            'validation_link': url.scheme + '://' + url.netloc + \
+                                reverse(handler_url_name) +\
+                                '?validation_code=' + key
+        }
+        template = get_template('authopenid/email_validation.html')
+        message = template.render(data)#todo: inject language preference
+        send_mail(subject, message, django_settings.DEFAULT_FROM_EMAIL, [email])
+    except:
+        logging.debug('Error in send_email_key: %s' % ','.join(unicode(sys.exec_info()[0])))
 def send_user_new_email_key(user):
-    user.email_key = generate_random_key()
-    user.save()
-    send_email_key(user.email, user.email_key)
-
+    try:
+        user.email_key = generate_random_key()
+        user.save()
+        send_email_key(user.email, user.email_key)
+    except:
+        logging.debug('Error in send_user_new_email_key: %s' % ','.join(unicode(sys.exec_info()[0])))
 def account_recover(request):
     """view similar to send_email_key, except
     it allows user to recover an account by entering
