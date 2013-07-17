@@ -4418,7 +4418,7 @@ msgstr "請依上列指引認證電子郵件地址"
 
 #: skins/common/templates/authopenid/email_validation.txt:9
 msgid ""
-"If you beleive that this message was sent in mistake - \n"
+"If you believe that this message was sent in mistake - \n"
 "no further action is needed. Just ingore this email, we apologize\n"
 "for any inconvenience"
 msgstr "如你肯定這訊息被誤送, 不需做任何動作, 並忽略此信, 非常抱歉! "
