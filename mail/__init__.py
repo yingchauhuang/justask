@@ -139,7 +139,7 @@ def send_mail(
         sys.stderr.write('\n send_mail:' + unicode(error).encode('utf-8') + '\n')
         try:
             sys.stderr.write('\n send_mail(subject_line):' + unicode(subject_line).encode('utf-8') + '\n')
-            sys.stderr.write('\n send_mail(body_tex):' + unicode(body_tex).encode('utf-8') + '\n')
+            sys.stderr.write('\n send_mail(body_text):' + unicode(body_text).encode('utf-8') + '\n')
             sys.stderr.write('\n send_mail(recipient_list):' + unicode(recipient_list).encode('utf-8') + '\n')
             sys.stderr.write('\n send_mail(headers):' + unicode(headers).encode('utf-8') + '\n')
         except:
