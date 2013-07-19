@@ -137,6 +137,13 @@ def send_mail(
             assert(activity_type is not None)
     except Exception, error:
         sys.stderr.write('\n send_mail:' + unicode(error).encode('utf-8') + '\n')
+        try:
+            sys.stderr.write('\n send_mail(subject_line):' + unicode(subject_line).encode('utf-8') + '\n')
+            sys.stderr.write('\n send_mail(body_tex):' + unicode(body_tex).encode('utf-8') + '\n')
+            sys.stderr.write('\n send_mail(recipient_list):' + unicode(recipient_list).encode('utf-8') + '\n')
+            sys.stderr.write('\n send_mail(headers):' + unicode(headers).encode('utf-8') + '\n')
+        except:
+            sys.stderr.write('\n send_mail(except):' + unicode(sys.exc_info()[0]).encode('utf-8') + '\n')
         if raise_on_failure == True:
             raise exceptions.EmailNotSent(unicode(error))
 
