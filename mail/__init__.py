@@ -21,7 +21,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import string_concat
 from django.template import Context
 from django.utils.html import strip_tags
-
+from django.utils.encoding import smart_str, force_unicode
 #todo: maybe send_mail functions belong to models
 #or the future API
 def prefix_the_subject_line(subject):
@@ -132,9 +132,10 @@ def send_mail(
                         headers = headers
                     )
         msg.attach_alternative(body_text, "text/html")
-        sys.stderr.write('\n send_mail(before Send):' + unicode(from_email).encode('utf-8') + '\n')
+        #sys.stderr.write('\n send_mail(before Send):' + unicode(msg.body).encode('utf-8') + '\n')
+        #sys.stderr.write('\n send_mail(before Send2):' + unicode(smart_str(body_text,'utf-8')).encode('utf-8') + '\n')
         msg.send()
-        sys.stderr.write('\n send_mail(after Send):' + unicode(from_email).encode('utf-8') + '\n')
+        #sys.stderr.write('\n send_mail(after Send):' + unicode(from_email).encode('utf-8') + '\n')
         if related_object is not None:
             assert(activity_type is not None)
     except Exception, error:
