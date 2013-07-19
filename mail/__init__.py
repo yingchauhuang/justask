@@ -134,10 +134,12 @@ def send_mail(
         msg.attach_alternative(body_text, "text/html")
         sys.stderr.write('\n send_mail(before Send):' + unicode(from_email).encode('utf-8') + '\n')
         msg.send()
+        sys.stderr.write('\n send_mail(after Send):' + unicode(from_email).encode('utf-8') + '\n')
         if related_object is not None:
             assert(activity_type is not None)
     except Exception, error:
         sys.stderr.write('\n send_mail:' + unicode(error).encode('utf-8') + '\n')
+        """
         try:
             sys.stderr.write('\n send_mail(subject_line):' + unicode(subject_line).encode('utf-8') + '\n')
             sys.stderr.write('\n send_mail(body_text):' + unicode(body_text).encode('utf-8') + '\n')
@@ -145,6 +147,7 @@ def send_mail(
             sys.stderr.write('\n send_mail(headers):' + unicode(headers).encode('utf-8') + '\n')
         except:
             sys.stderr.write('\n send_mail(except):' + unicode(sys.exc_info()[0]).encode('utf-8') + '\n')
+        """
         if raise_on_failure == True:
             raise exceptions.EmailNotSent(unicode(error))
 
