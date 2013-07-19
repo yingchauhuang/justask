@@ -132,6 +132,7 @@ def send_mail(
                         headers = headers
                     )
         msg.attach_alternative(body_text, "text/html")
+        sys.stderr.write('\n send_mail(before Send):' + unicode(from_email).encode('utf-8') + '\n')
         msg.send()
         if related_object is not None:
             assert(activity_type is not None)
