@@ -212,6 +212,10 @@ msgstr "移除登入方式"
 msgid "delete"
 msgstr "刪除"
 
+#: templates/question/answer_controls.html:62
+msgid "convert to comment"
+msgstr "轉成評論"
+
 #: skins/common/templates/authopenid/signin.html:168
 msgid "cannot be deleted"
 msgstr "無法刪除"
@@ -487,6 +491,10 @@ msgstr "內容至少要10個字符"
 #: skins/common/templates/widgets/edit_post.html:32
 #: skins/default/templates/widgets/meta_nav.html:5
 msgid "tags"
+msgstr "標籤"
+
+#: skins/default/templates/widgets/meta_nav.html:5
+msgid "Tags"
 msgstr "標籤"
 
 #: forms.py:137
@@ -820,7 +828,7 @@ msgstr ""
 
 #: forms.py:551
 msgid "Your message:"
-msgstr "Copyright(c)2012. Asali.com.tw"
+msgstr "請輸入您寶貴的意見:"
 
 #: forms.py:556
 msgid "I don't want to give my email or receive a response:"
@@ -1135,38 +1143,38 @@ msgstr "徽章設定"
 
 #: conf/badges.py:23
 msgid "Disciplined: minimum upvotes for deleted post"
-msgstr "自我規範: 自己刪除掉的內容也至少獲得幾次『負評』"
+msgstr "自我規範: 自己刪除掉的內容也至少獲得幾次『正評』"
 
 #: conf/badges.py:32
 msgid "Peer Pressure: minimum downvotes for deleted post"
-msgstr "同儕壓力: 自己刪除掉的內容也至少獲得幾次『噓』 "
+msgstr "同儕壓力: 自己刪除掉的內容也至少獲得幾次『負評』 "
 
 #: conf/badges.py:41
 msgid "Teacher: minimum upvotes for the answer"
-msgstr "老師: 回答最少要獲得幾次『負評』"
+msgstr "老師: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:50
 msgid "Nice Answer: minimum upvotes for the answer"
-msgstr "妙答: 回答最少要獲得幾次『負評』"
+msgstr "妙答: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:59
 msgid "Good Answer: minimum upvotes for the answer"
-msgstr "好回答: 回答最少要獲得幾次『負評』"
+msgstr "好回答: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:68
 msgid "Great Answer: minimum upvotes for the answer"
-msgstr "精闢答案: 回答最少要獲得幾次『負評』"
+msgstr "精闢答案: 回答最少要獲得幾次『正評』"
 
 #: conf/badges.py:77
 msgid "Nice Question: minimum upvotes for the question"
-msgstr "妙問: 問題最少要獲得幾次『負評』"
+msgstr "妙問: 問題最少要獲得幾次『正評』"
 #: conf/badges.py:86
 msgid "Good Question: minimum upvotes for the question"
-msgstr "好問題: 問題最少要獲得幾次『負評』"
+msgstr "好問題: 問題最少要獲得幾次『正評』"
 
 #: conf/badges.py:95
 msgid "Great Question: minimum upvotes for the question"
-msgstr "問的極好: 問題最少要獲得幾次『負評』"
+msgstr "問的極好: 問題最少要獲得幾次『正評』"
 
 #: conf/badges.py:104
 msgid "Popular Question: minimum views"
@@ -1181,22 +1189,22 @@ msgid "Famous Question: minimum views"
 msgstr "著名問題: 問題最少要被瀏覽幾次"
 #: conf/badges.py:131
 msgid "Self-Learner: minimum answer upvotes"
-msgstr "自學者: 回答自己的問題最少要獲得幾次『負評』"
+msgstr "自學者: 回答自己的問題最少要獲得幾次『正評』"
 #: conf/badges.py:140
 msgid "Civic Duty: minimum votes"
 msgstr "社會責任: 最少要給出的評分次數"
 
 #: conf/badges.py:149
 msgid "Enlightened Duty: minimum upvotes"
-msgstr "具啟發性定義: 最少要獲得『負評』的次數"
+msgstr "具啟發性定義: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:158
 msgid "Guru: minimum upvotes"
-msgstr "大師: 最少要獲得『負評』的次數"
+msgstr "大師: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:167
 msgid "Necromancer: minimum upvotes"
-msgstr "法師: 最少要獲得『負評』的次數"
+msgstr "法師: 最少要獲得『正評』的次數"
 
 #: conf/badges.py:176
 msgid "Necromancer: minimum delay in days"
@@ -1911,7 +1919,7 @@ msgstr "正評(+1)"
 
 #: conf/minimum_reputation.py:31
 msgid "Downvote"
-msgstr "噓(-1)"
+msgstr "負評(-1)"
 
 #: conf/minimum_reputation.py:40
 msgid "Answer own question immediately"
@@ -1994,7 +2002,7 @@ msgstr "每個使用者每天可以獲得的最多積分"
 
 #: conf/reputation_changes.py:32
 msgid "Gain for receiving an upvote"
-msgstr "取得到一個『負評』, 獲得"
+msgstr "取得到一個『正評』, 獲得"
 
 #: conf/reputation_changes.py:41
 msgid "Gain for the author of accepted answer"
@@ -2005,10 +2013,10 @@ msgstr "最佳答案標記, 獲得"
 
 #: conf/reputation_changes.py:59
 msgid "Gain for post owner on canceled downvote"
-msgstr "問題提出者取消對於您的內容的『噓』評價, 獲得"
+msgstr "問題提出者取消對於您的內容的『負評』評價, 獲得"
 #: conf/reputation_changes.py:68
 msgid "Gain for voter on canceling downvote"
-msgstr "取消對於您的內容的『噓』評價, 獲得"
+msgstr "取消對於您的內容的『負評』評價, 獲得"
 
 #: conf/reputation_changes.py:78
 msgid "Loss for voter for canceling of answer acceptance"
@@ -2018,7 +2026,7 @@ msgid "Loss for author whose answer was \"un-accepted\""
 msgstr "發表者對於您的回答『不接受』, 喪失"
 #: conf/reputation_changes.py:98
 msgid "Loss for giving a downvote"
-msgstr "收到一個『噓』, 喪失"
+msgstr "收到一個『負評』, 喪失"
 
 #: conf/reputation_changes.py:108
 msgid "Loss for owner of post that was flagged offensive"
@@ -2026,7 +2034,7 @@ msgstr "收到不洽當內容的標記, 喪失"
 
 #: conf/reputation_changes.py:118
 msgid "Loss for owner of post that was downvoted"
-msgstr "收到一個問題提出者的『噓』評價, 喪失"
+msgstr "收到一個問題提出者的『負評』評價, 喪失"
 #: conf/reputation_changes.py:128
 msgid "Loss for owner of post that was flagged 3 times per same revision"
 msgstr "問題提出者標註 3次相同的修正, 喪失"
@@ -2037,7 +2045,7 @@ msgstr "問題提出者標註 5次相同的修正, 喪失"
 
 #: conf/reputation_changes.py:148
 msgid "Loss for post owner when upvote is canceled"
-msgstr "問題提出者取消對於您的內容的『負評』評價, 喪失"
+msgstr "問題提出者取消對於您的內容的『正評』評價, 喪失"
 
 #: conf/sidebar_main.py:12
 msgid "Main page sidebar"
@@ -2236,6 +2244,10 @@ msgstr "初始模式是針對 比較小的及剛起步的 「知識+」, 給予�
 #: conf/site_settings.py:12
 msgid "Keepwin"
 msgstr "靈龜穩賺網"
+
+#: conf/site_settings.py:12
+msgid "Taiwan, Province of China"
+msgstr "Taiwan"
 
 #: conf/site_settings.py:12
 msgid "Keepwin,Stock,Investment,Taiwan Stock,CNPROG,forum,community"
@@ -2929,6 +2941,10 @@ msgstr "編輯回答"
 #: const/__init__.py:128
 msgid "received award"
 msgstr "獲獎"
+
+#: const/__init__.py:128
+msgid "received badge"
+msgstr "獲得徽章"
 
 #: const/__init__.py:129
 msgid "marked best answer"
@@ -3695,7 +3711,7 @@ msgstr "請登入 立刻使用%s ! "
 
 #: models/badges.py:129
 msgid "Deleted own post with %(votes)s or more upvotes"
-msgstr "刪除評分大於 %(votes)s 次『負評』的張貼"
+msgstr "刪除評分大於 %(votes)s 次『正評』的張貼"
 
 #: models/badges.py:133
 msgid "Disciplined"
@@ -3703,7 +3719,7 @@ msgstr "自我規範"
 
 #: models/badges.py:151
 msgid "Deleted own post with %(votes)s or more downvotes"
-msgstr "刪除評分少於 %(votes)s 次『噓』的張貼"
+msgstr "刪除評分少於 %(votes)s 次『負評』的張貼"
 
 #: models/badges.py:155
 msgid "Peer Pressure"
@@ -3712,7 +3728,7 @@ msgstr "同儕壓力"
 #: models/badges.py:174
 #, python-format
 msgid "Received at least %(votes)s upvote for an answer for the first time"
-msgstr "第一次回答獲得至少 %(votes)s 次『負評』"
+msgstr "第一次回答獲得至少 %(votes)s 次『正評』"
 
 #: models/badges.py:178
 msgid "Teacher"
@@ -3724,7 +3740,7 @@ msgstr "贊成者"
 
 #: models/badges.py:219
 msgid "First upvote"
-msgstr "第一個說『負評』"
+msgstr "第一個給出正面評分(讚)"
 
 #: models/badges.py:227
 msgid "Critic"
@@ -3744,7 +3760,7 @@ msgstr " 給出超過 %(num)s 評分 "
 
 #: models/badges.py:252
 msgid "Answered own question with at least %(num)s up votes"
-msgstr "回答至少有%(num)s個負評的問題"
+msgstr "回答至少有%(num)s個正評的問題"
 #: models/badges.py:256
 msgid "Self-Learner"
 msgstr "自學者"
@@ -3755,7 +3771,7 @@ msgstr "妙答"
 
 #: models/badges.py:309 models/badges.py:321 models/badges.py:333
 msgid "Answer voted up %(num)s times"
-msgstr "回答獲得超過%(num)s 次『負評』"
+msgstr "回答獲得超過%(num)s 次『正評』"
 
 #: models/badges.py:316
 msgid "Good Answer"
@@ -3770,7 +3786,7 @@ msgstr "妙問"
 
 #: models/badges.py:345 models/badges.py:357 models/badges.py:369
 msgid "Question voted up %(num)s times"
-msgstr "問題獲得超過%(num)s 次『負評』"
+msgstr "問題獲得超過%(num)s 次『正評』"
 
 #: models/badges.py:352
 msgid "Good Question"
@@ -4383,7 +4399,7 @@ msgid ""
 "Forum Administrator"
 msgstr ""
 "你好, \n"
-" 「知識+」管理者"
+" 「嘉實知識+」管理者"
 
 #: skins/common/templates/authopenid/email_validation.txt:1
 #: skins/old/templates/authopenid/email_validation.txt:1
@@ -4402,8 +4418,8 @@ msgstr "請依上列指引認證電子郵件地址"
 
 #: skins/common/templates/authopenid/email_validation.txt:9
 msgid ""
-"If you beleive that this message was sent in mistake - \n"
-"no further action is needed. Just ingore this email, we apologize\n"
+"If you believe that this message was sent in mistake - "
+"no further action is needed. Just ignore this email, we apologize "
 "for any inconvenience"
 msgstr "如你肯定這訊息被誤送, 不需做任何動作, 並忽略此信, 非常抱歉! "
 
@@ -4532,11 +4548,42 @@ msgstr "刪除這些"
 
 #: skins/common/templates/question/answer_controls.html:5
 msgid "answer permanent link"
-msgstr "permanent link"
+msgstr "另外的答案連結"
 
 #: skins/common/templates/question/answer_controls.html:6
 msgid "permanent link"
-msgstr "link"
+msgstr "答案連結"
+
+#: skins/common/templates/question/answer_controls.html:13
+#: skins/common/templates/question/question_controls.html:4
+msgid "undelete"
+msgstr "取消刪除"
+
+#: skins/common/templates/question/answer_controls.html:19
+#, fuzzy
+msgid "remove offensive flag"
+msgstr "移開不洽當標記"
+
+#: skins/common/templates/question/answer_controls.html:21
+#: skins/common/templates/question/question_controls.html:16
+msgid "remove flag"
+msgstr "移開標記"
+
+#: skins/common/templates/question/answer_controls.html:26
+#: skins/common/templates/question/answer_controls.html:35
+#: skins/common/templates/question/question_controls.html:14
+#: skins/common/templates/question/question_controls.html:20
+#: skins/common/templates/question/question_controls.html:27
+msgid ""
+"report as offensive (i.e containing spam, advertising, malicious text, etc.)"
+msgstr "回報為不洽當(如: 垃圾信, 廣告, 謾罵文, 等等.)"
+
+#: skins/common/templates/question/answer_controls.html:28
+#: skins/common/templates/question/answer_controls.html:37
+#: skins/common/templates/question/question_controls.html:22
+#: skins/common/templates/question/question_controls.html:29
+msgid "flag offensive"
+msgstr "標記為不洽當"
 
 #: skins/common/templates/question/answer_controls.html:10
 #: skins/common/templates/question/question_controls.html:3
@@ -4544,29 +4591,6 @@ msgstr "link"
 #: skins/default/templates/revisions.html:37
 msgid "edit"
 msgstr "編輯"
-
-#: skins/common/templates/question/answer_controls.html:14
-#: skins/common/templates/question/answer_controls.html:23
-#: skins/common/templates/question/question_controls.html:22
-#: skins/common/templates/question/question_controls.html:31
-msgid ""
-"report as offensive (i.e containing spam, advertising, malicious text, etc.)"
-msgstr "回報不洽當內容(如: 垃圾文, 廣告, 惡意文字等等)"
-
-#: skins/common/templates/question/answer_controls.html:15
-#: skins/common/templates/question/question_controls.html:23
-msgid "flag offensive"
-msgstr "標示為不洽當內容"
-
-#: skins/common/templates/question/answer_controls.html:24
-#: skins/common/templates/question/question_controls.html:32
-msgid "remove flag"
-msgstr ""
-
-#: skins/common/templates/question/answer_controls.html:34
-#: skins/common/templates/question/question_controls.html:39
-msgid "undelete"
-msgstr ""
 
 #: skins/common/templates/question/answer_controls.html:40
 msgid "swap with question"
@@ -4829,8 +4853,8 @@ msgstr "本「知識+」根據您的『問題』、『回答』、『評分』�
 #, python-format
 msgid ""
 "Below is the list of available badges and number \n"
-"of times each type of badge has been awarded. Give us feedback at "
-"%(feedback_faq_url)s.\n"
+"    of times each type of badge has been awarded. Have ideas about fun \n"
+"badges? Please, give us your <a href='%(feedback_faq_url)s'>feedback</a>\n"
 msgstr ""
 "以下列出所有的徽章及其頒發的條件 \n"
 "有頒給新徽章的任何建議嗎? "
@@ -4838,6 +4862,15 @@ msgstr ""
 #: skins/default/templates/badges.html:35
 msgid "Community badges"
 msgstr "「知識+」徽章"
+
+#: skins/default/templates/badges.html:41
+msgid ""
+"Gold badge is the highest award in this community. To obtain it you have to show \n"
+"profound knowledge and ability in addition to your active participation."
+msgstr ""
+"金牌徽章: 非常罕見的最高榮譽。除了要有專業的知識及解決問題的能力 "
+"更要活躍的參與各項活動.而且需要有高深的"
+"專業和能力才能獲得。"
 
 #: skins/default/templates/badges.html:37
 msgid "gold badge: the highest honor and is very rare"
@@ -4956,32 +4989,43 @@ msgstr ""
 "積分機制允許使用者透過各種操作來取得系統某些權限"
 
 #: skins/default/templates/faq_static.html:20
-msgid "How does reputation system work?"
+msgid "How does karma system work?"
 msgstr "積分機制如何運作?"
 
 #: skins/default/templates/faq_static.html:21
-msgid "Rep system summary"
+msgid "When a question or answer is upvoted, the user who posted them"
+" will gain some points, which are called \"karma points\". "
+"These points serve as a rough measure of the community trust to him/her."
+" Various moderation tasks are gradually assigned to the users based on those points."
 msgstr ""
-"當某個問題或回答收到『負評』的評價, 使用者會增加積分 "
+"當某個問題或回答收到『正評』的評價, 使用者會增加積分 "
 "我們透過這些積分機制來衡量「知識+」對使用者的信任及評價 "
 "您在「知識+」中的各種操作將會影響您的積分 "
 
 #: skins/default/templates/faq_static.html:22
 #, python-format
 msgid ""
-"例如, 您問了一個很好的問題或者有一個好回答, 您將會收到『負評』的評價 "
-"反過來說, 您的回答是誤導他人, 您將會收到『噓』的評價 "
-"每個『負評』會收到 <strong>"
-"%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong> 積分, 每個『負評』會扣除"
-"<strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong> 積分. 每天您"
-"最多可以得到 <strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong> 積分 "
-"以下表格說明每個操作所帶來的積分影響."
+"For example, if you ask an interesting question or give a helpful answer, your input "
+"will be upvoted. On the other hand if the answer is misleading - it will be downvoted. "
+"Each vote in favor will generate <strong>{{REP_GAIN_FOR_RECEIVING_UPVOTE}}</strong> points, "
+"each vote against will subtract <strong>{{REP_LOSS_FOR_RECEIVING_DOWNVOTE}}</strong> points. "
+"There is a limit of <strong>{{MAX_REP_GAIN_PER_USER_PER_DAY}}</strong> points that can be "
+"accumulated for a question or answer per day. The table below explains reputation point "
+"requirements for each type of moderation task."
 msgstr ""
+"例如, 您問了一個很好的問題或者有一個好回答, 您將會收到『正評』的評價 "
+"反過來說, 您的回答是誤導他人, 您將會收到『負評』的評價 "
+"每個『正評』會收到 <strong>"
+"{{REP_GAIN_FOR_RECEIVING_UPVOTE}}</strong> 積分, 每個『負評』會扣除"
+"<strong>{{REP_LOSS_FOR_RECEIVING_DOWNVOTE}}</strong> 積分. 每天您"
+"最多可以得到 <strong>{{MAX_REP_GAIN_PER_USER_PER_DAY}}</strong> 積分 "
+"以下表格說明每個操作所帶來的積分影響."
+
 
 #: skins/default/templates/faq_static.html:32
 #: skins/default/templates/user_profile/user_votes.html:13
 msgid "upvote"
-msgstr "『負評』"
+msgstr "『正評』"
 
 #: skins/default/templates/faq_static.html:37
 msgid "use tags"
@@ -4994,7 +5038,7 @@ msgstr "給問題"
 #: skins/default/templates/faq_static.html:46
 #: skins/default/templates/user_profile/user_votes.html:15
 msgid "downvote"
-msgstr "『噓』"
+msgstr "『負評』"
 
 #: skins/default/templates/faq_static.html:49
 msgid " accept own answer to own questions"
@@ -5085,11 +5129,11 @@ msgstr ""
 
 #: skins/default/templates/feedback.html:3
 msgid "Feedback"
-msgstr ""
+msgstr "批評與建議"
 
 #: skins/default/templates/feedback.html:5
 msgid "Give us your feedback!"
-msgstr ""
+msgstr "請不吝給我們批評與建議!"
 
 #: skins/default/templates/feedback.html:14
 #, python-format
@@ -5100,6 +5144,11 @@ msgid ""
 "        Please type and send us your message below.\n"
 "        "
 msgstr ""
+"\n"
+"        <span class='big strong'>親愛的 %(user_name)s</span>, 我們期待聽到您 "
+"的任何批評與建議. \n"
+"        請輸入您寶貴的意見並按下『送出我的意見』按鈕送出.\n"
+"        "
 
 #: skins/default/templates/feedback.html:21
 msgid ""
@@ -5109,23 +5158,28 @@ msgid ""
 "        Please type and send us your message below.\n"
 "        "
 msgstr ""
+"\n"
+"        <span class='big strong'>親愛的訪客</span>, 我們期待聽到您 "
+"的任何批評與建議.\n"
+"        請輸入您寶貴的意見並按下『送出我的意見』按鈕送出.\n"
+"        "
 
 #: skins/default/templates/feedback.html:30
 msgid "(to hear from us please enter a valid email or check the box below)"
-msgstr ""
+msgstr "(請輸入有效的 email 以便收到我們的回信)"
 
 #: skins/default/templates/feedback.html:37
 #: skins/default/templates/feedback.html:46
 msgid "(this field is required)"
-msgstr ""
+msgstr "(這是必要欄位)"
 
 #: skins/default/templates/feedback.html:55
 msgid "(Please solve the captcha)"
-msgstr ""
+msgstr "(請輸入驗證碼)"
 
 #: skins/default/templates/feedback.html:63
 msgid "Send Feedback"
-msgstr ""
+msgstr "送出我的意見"
 
 
 #: skins/default/templates/feedback_email.txt:2
@@ -5378,6 +5432,10 @@ msgstr ""
 msgid "<p>Sincerely,<br/>Forum Administrator</p>"
 msgstr "<p>此致,<br/>「知識+」系統管理員</p>"
 
+#: skins/default/templates/mail/footer.html:42
+msgid "Sincerely,<br>%(site_name)s Administrator"
+msgstr "此致,<br/>%(site_name)s 系統管理員"
+
 #: skins/default/templates/macros.html:3
 #, python-format
 msgid "Share this question on %(site)s"
@@ -5403,20 +5461,20 @@ msgstr "關注 %(alias)s"
 
 #: skins/default/templates/macros.html:29
 msgid "i like this question (click again to cancel)"
-msgstr "我要對這個問題說『負評』(再點擊一次取消)"
+msgstr "我要對這個問題說『正評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:31
 msgid "i like this answer (click again to cancel)"
-msgstr "我要對這個問題說『負評』(再點擊一次取消)"
+msgstr "我要對這個回答說『正評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:37
 msgid "current number of votes"
 msgstr "目前評分次數"
 
 #: skins/default/templates/macros.html:43
 msgid "i dont like this question (click again to cancel)"
-msgstr "我要對這個問題說『噓』(再點擊一次取消)"
+msgstr "我要對這個問題說『負評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:45
 msgid "i dont like this answer (click again to cancel)"
-msgstr "我要對這個問題說『噓』(再點擊一次取消)"
+msgstr "我要對這個問題說『負評』(再點擊一次取消)"
 #: skins/default/templates/macros.html:52
 msgid "anonymous user"
 msgstr "匿名使用者"
@@ -5547,6 +5605,12 @@ msgstr "有 %(new)s 個新標示為不洽當內容"
 #, python-format
 msgid "%(seen)s flagged posts"
 msgstr "%(seen)s 個已經看過"
+
+#: skins/default/templates/macros.html:658
+#: skins/default/templates/macros.html:659
+#, python-format
+msgid "Comments"
+msgstr "評論"
 
 #: skins/default/templates/privacy.html:3
 #: skins/default/templates/privacy.html:5
@@ -5881,22 +5945,10 @@ msgstr ""
 
 #: skins/default/templates/question/answer_tab_bar.html:3
 #, python-format
-msgid ""
-"\n"
-"        %(counter)s Answer\n"
-"        "
-msgid_plural ""
-"\n"
-"        %(counter)s Answers\n"
-"        "
-msgstr[0] ""
-"\n"
-"        %(counter)s 回答\n"
-"        "
-msgstr[1] ""
-"\n"
-"\n"
-"        "
+msgid "%(counter) Answer"
+msgid_plural "%(counter) Answers"
+msgstr[0] "%(counter)個回答"
+msgstr[1] "%(counter)個回答"
 
 #: skins/default/templates/question/answer_tab_bar.html:14
 msgid "oldest answers will be shown first"
@@ -6177,10 +6229,6 @@ msgstr "關注問題"
 msgid "inbox"
 msgstr "信箱"
 
-#: skins/default/templates/user_profile/user_inbox.html:34
-msgid "Sections:"
-msgstr ""
-
 #: skins/default/templates/user_profile/user_inbox.html:38
 #, python-format
 msgid "forum responses (%(re_count)s)"
@@ -6237,6 +6285,10 @@ msgstr "真實姓名"
 
 #: skins/default/templates/user_profile/user_info.html:58
 msgid "member for"
+msgstr "會員起始"
+
+#: skins/default/templates/user_profile/user_info.html:58
+msgid "member since"
 msgstr "會員起始"
 
 #: skins/default/templates/user_profile/user_info.html:58
@@ -6558,19 +6610,19 @@ msgstr[1]  "<span class=\"count\">%(cnt)s</span> 評分..."
 
 #: skins/default/templates/user_profile/user_stats.html:50
 msgid "thumb up"
-msgstr "豎大拇指 『負評』"
+msgstr "豎大拇指 『正評』"
 
 #: skins/default/templates/user_profile/user_stats.html:51
 msgid "user has voted up this many times"
-msgstr "使用者已經說『負評』 許多次"
+msgstr "使用者已經說『正評』 許多次"
 
 #: skins/default/templates/user_profile/user_stats.html:54
 msgid "thumb down"
-msgstr "倒大拇指 『噓』"
+msgstr "倒大拇指 『負評』"
 
 #: skins/default/templates/user_profile/user_stats.html:55
 msgid "user voted down this many times"
-msgstr "使用者已經說『噓』 許多次"
+msgstr "使用者已經說『負評』 許多次"
 
 #: skins/default/templates/user_profile/user_stats.html:63
 #, python-format
@@ -6600,6 +6652,10 @@ msgstr "針對其他問題的評論及回答"
 #: skins/default/templates/user_profile/user_tabs.html:16
 msgid "followers and followed users"
 msgstr "我所關注的及關注我的"
+
+#: skins/default/templates/user_profile/user_tabs.html:21
+msgid "Graph of user karma"
+msgstr "使用者積分圖"
 
 #: skins/default/templates/user_profile/user_tabs.html:21
 msgid "graph of user reputation"
@@ -7052,7 +7108,7 @@ msgid "user name can only consist of letters, empty space and underscore"
 msgstr "名稱(暱稱)只能由\"字母\" \"空白\" \"_\" 組成"
 
 #: utils/forms.py:118
-msgid "your email address"
+msgid "Your email <i>(never shared)</i>"
 msgstr "您的email <i>(請不要跟別人共用)</i>"
 
 
@@ -7078,7 +7134,7 @@ msgid "password is required"
 msgstr "密碼是必要欄位"
 
 #: utils/forms.py:153
-msgid "retype password"
+msgid "Password <i>(please retype)</i>"
 msgstr "密碼 <i>(請再輸入一次)</i>"
 
 
@@ -7175,7 +7231,7 @@ msgstr "對不起! 有些錯誤發生, 麻煩回報給管理員!"
 
 #: views/commands.py:207
 msgid "Sorry, but anonymous users cannot accept answers"
-msgstr "對不起! 您要登入後才能接受回答!"
+msgstr "對不起! 您要登入後才能標示正確(接受)回答!"
 
 #: views/commands.py:301
 #, python-format
@@ -7667,3 +7723,11 @@ msgstr "使用者資料"
 #: models/user.py:302
 msgid "PostRevision"
 msgstr "發文修正紀錄"
+
+#: user_inbox/responses_and_flags.py: 4
+msgid "inbox - responses"
+msgstr "信箱 - 我的回應"
+
+#: user_inbox/base.py: 4
+msgid "Sections:"
+msgstr "項目分類:"

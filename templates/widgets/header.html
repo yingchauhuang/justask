@@ -5,12 +5,17 @@
     class="{% if settings.SHOW_LOGO %}with-logo{% else %}without-logo{% endif %}"
 >
     <div class="content-wrapper">
-        <div id="userToolsNav">
-            {% include "widgets/user_navigation.html" %}
-        </div>
         {% if settings.SHOW_LOGO %}
             {% include "widgets/logo.html" %}
         {% endif %}
+		{% if settings.MAIN_SHOW_AD  %}
+		<div id="ad_29646" class="catbar-ad">
+			{{ settings.MAIN_AD_CONTENT }}
+		</div>
+		{% endif %}
+        <div id="userToolsNav">
+            {% include "widgets/user_navigation.html" %}
+        </div>
         <div id="metaNav">
             {% include "widgets/meta_nav.html" %}
         </div>

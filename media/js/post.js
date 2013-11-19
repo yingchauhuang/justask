@@ -1,4 +1,4 @@
-﻿/*
+/*
 Scripts for cnprog.com
 Project Name: Lanai
 All Rights Resevred 2008. CNPROG.COM
@@ -24,7 +24,7 @@ var lanai = {
 };
 
 function appendLoader(element) {
-    loading = gettext('loading...')
+    loading = gettext('讀取資料中...')
     element.append('<img class="ajax-loader" ' +
         'src="' + mediaUrl("media/images/indicator.gif") + '" title="' +
         loading +
@@ -96,8 +96,8 @@ var cleanTag = function(tag_name, settings) {
     if (tag_name.length > max_length) {
         throw interpolate(
             ngettext(
-                'must be shorter than %(max_chars)s character',
-                'must be shorter than %(max_chars)s characters',
+                '必需小於 %(max_chars)s 個字元',
+                '必需小於 %(max_chars)s 個字元',
                 max_length
             ),
             {'max_chars': max_length },
@@ -150,28 +150,28 @@ var CPValidator = function(){
         getQuestionFormMessages: function(){
             return {
                 tags: {
-                    required: " " + gettext('tags cannot be empty'),
+                    required: " " + gettext('標籤不能為空白'),
                     maxlength: askbot['messages']['tagLimits'],
                     limit_tag_count: askbot['messages']['maxTagsPerPost'],
                     limit_tag_length: askbot['messages']['maxTagLength']
                 },
                 text: {
-                    required: " " + gettext('content cannot be empty'),
+                    required: " " + gettext('內文不能為空白'),
                     minlength: interpolate(
                                     ngettext(
-                                        'question body must be > %s character',
-                                        'question body must be > %s characters',
+                                        '問題內文必需大於 > %s 字元',
+                                        '問題內文必需大於 > %s 字元',
                                         askbot['settings']['minQuestionBodyLength']
                                     ),
                                     [askbot['settings']['minQuestionBodyLength'], ]
                                 )
                 },
                 title: {
-                    required: " " + gettext('please enter title'),
+                    required: " " + gettext('請輸入標題'),
                     minlength: interpolate(
                                     ngettext(
-                                        'title must be > %s character',
-                                        'title must be > %s characters',
+                                        '標題內文必需大於 > %s 字元',
+                                        '標題內文必需大於 > %s 字元',
                                         askbot['settings']['minTitleLength']
                                     ),
                                     [askbot['settings']['minTitleLength'], ]
@@ -189,11 +189,11 @@ var CPValidator = function(){
         getAnswerFormMessages: function(){
             return {
                 text: {
-                    required: " " + gettext('content cannot be empty'),
+                    required: " " + gettext('內文不能為空白'),
                     minlength: interpolate(
                                     ngettext(
-                                        'answer must be > %s character',
-                                        'answer must be > %s characters',
+                                        '問題內文必需大於 > %s 字元',
+                                        '問題內文必需大於 > %s 字元',
                                         askbot['settings']['minAnswerBodyLength']
                                     ),
                                     [askbot['settings']['minAnswerBodyLength'], ]
@@ -249,7 +249,7 @@ ThreadUsersDialog.prototype.decorate = function(element) {
     this._url = element.data('url');
     var dialog = new ModalDialog();
     dialog.setRejectButtonText('');
-    dialog.setAcceptButtonText(gettext('Back to the question'));
+    dialog.setAcceptButtonText(gettext('回到問題頁'));
     dialog.setHeadingText(this._heading_text);
     dialog.setAcceptHandler(function(){ dialog.hide(); });
     var dialog_element = dialog.getElement();
@@ -299,7 +299,7 @@ DraftPost.prototype.backupData = function() {
 DraftPost.prototype.showNotification = function() {
     var note = $('.editor-status span');
     note.hide();
-    note.html(gettext('draft saved...'));
+    note.html(gettext('初稿已儲存...'));
     note.fadeIn().delay(3000).fadeOut();
 };
 
@@ -544,25 +544,25 @@ var Vote = function(){
     var questionSubscribeUpdates = 'question-subscribe-updates';
     var questionSubscribeSidebar= 'question-subscribe-sidebar';
 
-    var acceptAnonymousMessage = gettext('insufficient privilege');
-    var acceptOwnAnswerMessage = gettext('cannot pick own answer as best');
+    var acceptAnonymousMessage = gettext('沒有足夠的權限');
+    var acceptOwnAnswerMessage = gettext('不能將自己的回答標示成最佳解答');
 
     var pleaseLogin = " <a href='" + askbot['urls']['user_signin']
                     + "?next=" + askbot['urls']['question_url_template']
                     + "'>"
-                    + gettext('please login') + "</a>";
+                    + gettext('請登入') + "</a>";
 
-    var favoriteAnonymousMessage = gettext('anonymous users cannot follow questions') + pleaseLogin;
-    var subscribeAnonymousMessage = gettext('anonymous users cannot subscribe to questions') + pleaseLogin;
-    var voteAnonymousMessage = gettext('anonymous users cannot vote') + pleaseLogin;
+    var favoriteAnonymousMessage = gettext('還未登入的使用者不能關注問題') + pleaseLogin;
+    var subscribeAnonymousMessage = gettext('還未登入的使用者不能訂閱問題') + pleaseLogin;
+    var voteAnonymousMessage = gettext('還未登入的使用者不能投票') + pleaseLogin;
     //there were a couple of more messages...
-    var offensiveConfirmation = gettext('please confirm offensive');
-    var removeOffensiveConfirmation = gettext('please confirm removal of offensive flag');
-    var offensiveAnonymousMessage = gettext('anonymous users cannot flag offensive posts') + pleaseLogin;
-    var removeConfirmation = gettext('confirm delete');
-    var removeAnonymousMessage = gettext('anonymous users cannot delete/undelete') + pleaseLogin;
-    var recoveredMessage = gettext('post recovered');
-    var deletedMessage = gettext('post deleted');
+    var offensiveConfirmation = gettext('請確認這是攻擊性的文章');
+    var removeOffensiveConfirmation = gettext('請確認移除攻擊性文章的標記');
+    var offensiveAnonymousMessage = gettext('還未登入的使用者不能標記攻擊性文章') + pleaseLogin;
+    var removeConfirmation = gettext('確認刪除');
+    var removeAnonymousMessage = gettext('還未登入的使用者不能刪除或救回刪除') + pleaseLogin;
+    var recoveredMessage = gettext('文章已救回');
+    var deletedMessage = gettext('文章已刪除');
 
     var VoteType = {
         acceptAnswer : 0,
@@ -829,7 +829,7 @@ var Vote = function(){
             );
         }
         else if(data.status == "1"){
-            var follow_html = gettext('Follow');
+            var follow_html = gettext('關注');
             object.attr("class", 'button follow');
             object.html(follow_html);
             var fav = getFavoriteNumber();
@@ -838,16 +838,16 @@ var Vote = function(){
                 data.count = '';
                 fav.text('');
             }else{
-                var fmts = ngettext('%s follower', '%s followers', data.count);
+                var fmts = ngettext('%s 關注者', '%s 關注者', data.count);
                 fav.text(interpolate(fmts, [data.count]));
             }
         }
         else if(data.success == "1"){
-            var followed_html = gettext('<div>Following</div><div class="unfollow">Unfollow</div>');
+            var followed_html = gettext('<div>關注</div><div class="unfollow">取消關注</div>');
             object.html(followed_html);
             object.attr("class", 'button followed');
             var fav = getFavoriteNumber();
-            var fmts = ngettext('%s follower', '%s followers', data.count);
+            var fmts = ngettext('%s 關注者', '%s 關注者', data.count);
             fav.text(interpolate(fmts, [data.count]));
             fav.addClass("my-favorite-number");
         }
@@ -899,7 +899,7 @@ var Vote = function(){
                 $(object).children('span[class="darkred"]').text("");
 
             // Change the link text and rebind events
-            $(object).find("a.question-flag").html(gettext("remove flag"));
+            $(object).find("a.question-flag").html(gettext("移除標記"));
             var obj_id = $(object).attr("id");
             $(object).attr("id", obj_id.replace("flag-", "remove-flag-"));
 
@@ -933,7 +933,7 @@ var Vote = function(){
                 $(remove_all).remove();
             }
             // Change the link text and rebind events
-            $(object).find("a.question-flag").html(gettext("flag offensive"));
+            $(object).find("a.question-flag").html(gettext("標記攻擊性文章"));
             var obj_id = $(object).attr("id");
             $(object).attr("id", obj_id.replace("remove-flag-", "flag-"));
 
@@ -962,7 +962,7 @@ var Vote = function(){
                 $(object).children('span[class="darkred"]').text("");
             // remove the link. All flags are gone
             var remove_own = $(object).siblings('span.offensive-flag[id*="-offensive-remove-flag-"]');
-            $(remove_own).find("a.question-flag").html(gettext("flag offensive"));
+            $(remove_own).find("a.question-flag").html(gettext("標記攻擊性文章"));
             $(remove_own).attr("id", $(remove_own).attr("id").replace("remove-flag-", "flag-"));
             
             $(object).next("span.sep").remove();
@@ -988,12 +988,12 @@ var Vote = function(){
         if (data.success == "1"){
             if (removeActionType == 'delete'){
                 postNode.addClass('deleted');
-                postRemoveLink.innerHTML = gettext('undelete');
+                postRemoveLink.innerHTML = gettext('救回刪除');
                 showMessage(object, deletedMessage);
             }
             else if (removeActionType == 'undelete') {
                 postNode.removeClass('deleted');
-                postRemoveLink.innerHTML = gettext('delete');
+                postRemoveLink.innerHTML = gettext('刪除');
                 showMessage(object, recoveredMessage);
             }
         }
@@ -1272,7 +1272,7 @@ var questionRetagger = function(){
             },
             messages: {
                 tags: {
-                    required: gettext('tags cannot be empty'),
+                    required: gettext('標籤不能為空白'),
                     maxlength: askbot['messages']['tagLimits'],
                     limit_tag_count: askbot['messages']['maxTagsPerPost'],
                     limit_tag_length: askbot['messages']['maxTagLength']
@@ -1372,11 +1372,11 @@ DeletePostLink.prototype.setPostDeleted = function(is_deleted){
     if (is_deleted === true){
         post.addClass('deleted');
         this._post_deleted = true;
-        this.getElement().html(gettext('undelete'));
+        this.getElement().html(gettext('救回刪除'));
     } else if (is_deleted === false){
         post.removeClass('deleted');
         this._post_deleted = false;
-        this.getElement().html(gettext('delete'));
+        this.getElement().html(gettext('刪除'));
     }
 };
 
@@ -1438,10 +1438,10 @@ EditCommentForm.prototype.attachTo = function(comment, mode){
     comment.getElement().hide();
     this._comment_widget.hideButton();
     if (this._type == 'add'){
-        this._submit_btn.html(gettext('add comment'));
+        this._submit_btn.html(gettext('增加評論'));
     }
     else {
-        this._submit_btn.html(gettext('save comment'));
+        this._submit_btn.html(gettext('儲存評論'));
     }
     this.getElement().show();
     this.enableButtons();
@@ -1469,15 +1469,15 @@ EditCommentForm.prototype.getCounterUpdater = function(){
         var color = 'maroon';
         var chars = 10;
         if (length === 0){
-            var feedback = interpolate(gettext('%s title minchars'), [chars]);
+            var feedback = interpolate(gettext('需要輸入%s 個字元'), [chars]);
         }
         else if (length < 10){
-            var feedback = interpolate(gettext('enter %s more characters'), [chars - length]);
+            var feedback = interpolate(gettext('請輸入 %s 個更多的字元'), [chars - length]);
         }
         else {
             color = length > length2 ? "#f00" : length > length1 ? "#f60" : "#999"
 			chars = maxCommentLength - length
-            var feedback = interpolate(gettext('%s characters left'), [chars])
+            var feedback = interpolate(gettext('還剩%s 字元'), [chars])
         }
         counter.html(feedback).css('color', color)
     };
@@ -1548,7 +1548,7 @@ EditCommentForm.prototype.createDom = function(){
     this._submit_btn = $('<button class="submit small"></button>');
     div.append(this._submit_btn);
     this._cancel_btn = $('<button class="submit small"></button>');
-    this._cancel_btn.html(gettext('cancel'));
+    this._cancel_btn.html(gettext('取消'));
     div.append(this._cancel_btn);
 
     setupButtonEventHandlers(this._submit_btn, this.getSaveHandler());
@@ -1591,7 +1591,7 @@ EditCommentForm.prototype.reset = function(){
 EditCommentForm.prototype.confirmAbandon = function(){
     this.focus(true);
     this._textarea.addClass('highlight');
-    var answer = confirm(gettext("Are you sure you don't want to post this comment?"));
+    var answer = confirm(gettext("您確定不要張貼此項評論?"));
     this._textarea.removeClass('highlight');
     return answer;
 };
@@ -1668,7 +1668,7 @@ var Comment = function(widget, data){
     this._element = null;
     this._is_convertible = askbot['data']['userIsAdminOrMod'];
     this.convert_link = null;
-    this._delete_prompt = gettext('delete this comment');
+    this._delete_prompt = gettext('刪除本則評論');
     if (data && data['is_deletable']){
         this._deletable = data['is_deletable'];
     }
@@ -1888,7 +1888,7 @@ Comment.prototype.getDeleteHandler = function(){
     var comment = this;
     var del_icon = this._delete_icon;
     return function(){
-        if (confirm(gettext('confirm delete comment'))){
+        if (confirm(gettext('確認刪除評論'))){
             comment.getElement().hide();
             $.ajax({
                 type: 'POST',
@@ -2129,7 +2129,7 @@ QASwapper.prototype.decorate = function(element){
 
 QASwapper.prototype.startSwapping = function(){
     while (true){
-        var title = prompt(gettext('Please enter question title (>10 characters)'));
+        var title = prompt(gettext('請輸入問題的標題 (請大於 10 個字元)'));
         if (title.length >= 10){
             var data = {new_title: title, answer_id: this._ans_id};
             $.ajax({
@@ -2425,13 +2425,13 @@ TagWikiEditor.prototype.decorate = function(element){
 
     //adding two buttons...
     var save_btn = this.makeElement('a');
-    save_btn.html(gettext('save'));
+    save_btn.html(gettext('儲存'));
     edit_btn.after(save_btn);
     save_btn.hide();
     this._save_btn = save_btn;
 
     var cancel_btn = this.makeElement('a');
-    cancel_btn.html(gettext('cancel'));
+    cancel_btn.html(gettext('取消'));
     save_btn.after(cancel_btn);
     cancel_btn.hide();
     this._cancel_btn = cancel_btn;
@@ -2551,7 +2551,7 @@ ImageChanger.prototype.startDialog = function(){
     var change_image_text = this._messages['change_image'];
     var change_image_button = this._element;
     Attacklab.Util.prompt(
-        "<h3>" + gettext('Enter the logo url or upload an image') + '</h3>',
+        "<h3>" + gettext('請輸入logo 的網址以便上傳圖案') + '</h3>',
         'http://',
         function(image_url){
             if (image_url){
@@ -2577,7 +2577,7 @@ ImageChanger.prototype.hideDeleteButton = function(){
 
 
 ImageChanger.prototype.startDeleting = function(){
-    if (confirm(gettext('Do you really want to remove the image?'))){
+    if (confirm(gettext('您真的要移除這個圖案嗎?'))){
         this.deleteImage();
         this._element.html(this._messages['add_image']);
         this.hideDeleteButton();
@@ -2685,8 +2685,8 @@ UserGroupProfileEditor.prototype.decorate = function(element){
     logo_changer.setSaveUrl(askbot['urls']['save_group_logo_url']);
     logo_changer.setDeleteUrl(askbot['urls']['delete_group_logo_url']);
     logo_changer.setMessages({
-        change_image: gettext('change logo'),
-        add_image: gettext('add logo')
+        change_image: gettext('更改logo'),
+        add_image: gettext('新增logo')
     });
     var delete_logo_btn = element.find('.delete-logo');
     logo_changer.setDeleteButton(delete_logo_btn);
@@ -2788,7 +2788,7 @@ TagEditor.prototype.cleanTag = function(tag_name, reject_dupe) {
 
     if (reject_dupe && this.isSelectedTagName(tag_name)) {
         throw interpolate(
-            gettext('tag "%s" was already added, no need to repeat (press "escape" to delete)'),
+            gettext('這個 "%s" 已經新增了, 不需要重複增加(按下 "escape" 以便刪除)'),
             [tag_name]
         );
     }
@@ -2797,8 +2797,8 @@ TagEditor.prototype.cleanTag = function(tag_name, reject_dupe) {
     if (this.getSelectedTags().length + 1 > max_tags) {//count current
         throw interpolate(
             ngettext(
-                'a maximum of %s tag is allowed',
-                'a maximum of %s tags are allowed',
+                '系統允許最多可以有 %s 個標籤',
+                '系統允許最少可以有 %s 個標籤',
                 max_tags
             ),
             [max_tags]
@@ -3144,7 +3144,7 @@ Category.prototype.getInput = function() {
 Category.prototype.getDeleteHandler = function() {
     var me = this;
     return function() {
-        if (confirm(gettext('Delete category?'))) {
+        if (confirm(gettext('要刪除類別?'))) {
             var tree = me.getCategoryTree();
             $.ajax({
                 type: 'POST',
@@ -3214,7 +3214,7 @@ Category.prototype.addControls = function() {
     this._element.append(input_box);
 
     var save_button = this.makeButton(
-        gettext('save'),
+        gettext('儲存'),
         this.getSaveHandler()
     );
     this._save_button = save_button;
@@ -3233,7 +3233,7 @@ Category.prototype.addControls = function() {
     this._element.append(cancel_button);
 
     var edit_button = this.makeButton(
-        gettext('edit'),
+        gettext('編輯'),
         function(){ 
             //todo: I would like to make only one at a time editable
             //var tree = me.getCategoryTree();
@@ -3320,7 +3320,7 @@ CategoryAdder.prototype.setState = function(state) {
 CategoryAdder.prototype.cleanCategoryName = function(name) {
     name = $.trim(name);
     if (name === '') {
-        throw gettext('category name cannot be empty');
+        throw gettext('類別名稱不能為空白');
     }
     //if ( this._tree.hasCategory(name) ) {
         //throw interpolate(
@@ -3356,7 +3356,7 @@ CategoryAdder.prototype.startAdding = function() {
     //don't add dupes to the same level
     var existing_names = this.getSelectBox().getNames();
     if ($.inArray(name, existing_names) != -1) {
-        alert(gettext('already exists at the current level!'));
+        alert(gettext('已經存在於本階層之中!'));
         return;
     }
 
@@ -3392,7 +3392,7 @@ CategoryAdder.prototype.createDom = function() {
     //add open adder link
     var trigger = this.makeElement('a');
     this._trigger = trigger;
-    trigger.html(gettext('add category'));
+    trigger.html(gettext('新增類別'));
     this._element.append(trigger);
     //add input box and the add button
     var input = this.makeElement('input');
@@ -3403,7 +3403,7 @@ CategoryAdder.prototype.createDom = function() {
     //add save category button
     var save_button = this.makeElement('button');
     this._save_button = save_button;
-    save_button.html(gettext('save'));
+    save_button.html(gettext('儲存'));
     this._element.append(save_button);
 
     var cancel_button = this.makeElement('button');
@@ -3939,11 +3939,11 @@ CategorySelectorLoader.prototype.decorate = function(element) {
 
     this._editor_buttons = this.makeElement('div');
     this._done_button = this.makeElement('button');
-    this._done_button.html(gettext('save tags'));
+    this._done_button.html(gettext('儲存標籤'));
     this._editor_buttons.append(this._done_button);
 
     this._cancel_button = this.makeElement('button');
-    this._cancel_button.html(gettext('cancel'));
+    this._cancel_button.html(gettext('取消'));
     this._editor_buttons.append(this._cancel_button);
     this._editor_buttons.find('button').addClass('submit');
     this._editor_buttons.addClass('retagger-buttons');
@@ -4022,7 +4022,7 @@ $(document).ready(function() {
         var fakeUserAc = new AutoCompleter({
             url: '/get-users-info/',//askbot['urls']['get_users_info'],
             preloadData: true,
-            promptText: gettext('User name:'),
+            promptText: gettext('使用者名稱:'),
             minChars: 1,
             useCache: true,
             matchInside: true,
@@ -4044,7 +4044,7 @@ $(document).ready(function() {
         var groupsAc = new AutoCompleter({
             url: askbot['urls']['getGroupsList'],
             preloadData: true,
-            promptText: gettext('Group name:'),
+            promptText: gettext('群組名稱:'),
             minChars: 1,
             useCache: false,
             matchInside: true,
@@ -4058,7 +4058,7 @@ $(document).ready(function() {
         var usersAc = new AutoCompleter({
             url: '/get-users-info/',
             preloadData: true,
-            promptText: gettext('User name:'),
+            promptText: gettext('使用者名稱:'),
             minChars: 1,
             useCache: false,
             matchInside: true,
@@ -4071,13 +4071,13 @@ $(document).ready(function() {
     var showSharedUsers = $('.see-related-users');
     if (showSharedUsers.length) {
         var usersPopup = new ThreadUsersDialog();
-        usersPopup.setHeadingText(gettext('Shared with the following users:'));
+        usersPopup.setHeadingText(gettext('跟關注這個議題的網友分享:'));
         usersPopup.decorate(showSharedUsers);
     }
     var showSharedGroups = $('.see-related-groups');
     if (showSharedGroups.length) {
         var groupsPopup = new ThreadUsersDialog();
-        groupsPopup.setHeadingText(gettext('Shared with the following groups:'));
+        groupsPopup.setHeadingText(gettext('跟關注這個議題的網友分享:'));
         groupsPopup.decorate(showSharedGroups);
     }
 });

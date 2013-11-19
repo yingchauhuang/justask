@@ -631,17 +631,17 @@ answer {% if answer.accepted() %}accepted-answer{% endif %} {% if answer.author_
 {#todo: rename this to avatar #}
 {%- macro gravatar(user, size) -%}
 {% spaceless %}
-<a style="text-decoration:none"
+<a style="text-decoration:none" class="sub-gravatar"
     href="{{ user.get_absolute_url() }}"
-><img class="moneydj" 
-    width="{{size}}" height="{{size}}"
-    src='{{"../media/images/SysJust.png"|media}}'
-/><img class="gravatar" 
+><img class="gravatar" 
     width="{{size}}" height="{{size}}"
     src="{{ user.get_avatar_url(size) }}"
     title="{{user.username|escape}}" 
     alt="{% trans username=user.username|escape %}{{username}} gravatar image{% endtrans %}" 
-/></a>
+/>{% if user.is_staff %}<img class="moneydj" 
+    style="margin-left:-{{size}}px" width="{{size}}" height="{{size}}"
+    src='{{"../media/images/SysJust.png"|media}}'
+/>{% endif %}</a>
 {% endspaceless %}
 {%- endmacro -%}
 

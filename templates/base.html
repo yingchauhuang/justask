@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>{% block title %}{% endblock %} - {{ settings.APP_TITLE|escape }}</title>
+    <head>    
+        <title>{% block title %}{% endblock %} - {% if settings.APP_TITLE %}{{ settings.APP_TITLE|escape }}
+		{% endif %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         {% block meta_description %}
         <meta name="description" content="{{settings.APP_DESCRIPTION|escape}}" />
