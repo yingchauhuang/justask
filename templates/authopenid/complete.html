@@ -20,6 +20,23 @@ parameters:
 {% block title %}{% spaceless %}{% trans %}Registration{% endtrans %}{% endspaceless %}{% endblock %}
 {% block content %}
     <h1>{% trans %}User registration{% endtrans %}</h1>
+	<div id="completetxt" >
+        <div class="message">
+            {% if login_type=='openid' %}
+                {% trans %}register new {{provider}} account info, see {{gravatar_faq_url}}{% endtrans %}
+            {% elif login_type=='legacy' %}
+                    {% if external_login_name_is_taken %}
+                        {% trans %}{{username}} already exists, choose another name for 
+                            {{provider}}. Email is required too, see {{gravatar_faq_url}}
+                        {% endtrans %} 
+                    {% else %}
+                        {% trans %}register new external {{provider}} account info, see {{gravatar_faq_url}}{% endtrans %}
+                    {% endif %}
+            {% else %}
+                {% trans %}register new Facebook connect account info, see {{gravatar_faq_url}}{% endtrans %}
+            {% endif %}
+        </div>
+    </div>
     {% if openid_register_form.errors %}
         <ul class="errorlist">
         {% for error in openid_register_form.non_field_errors() %}
